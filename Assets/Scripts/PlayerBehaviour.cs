@@ -6,17 +6,19 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public float PlayerSpeed;                                                   //Keeps Player Speed
     private Vector2 PlayerDirection;                                            //Keeps track of PlayerDirection
-    private Rigidbody2D rb2d;                                                   //Keeps a reference to rigidbody
+    private Rigidbody2D PlayerBody;                                                   //Keeps a reference to rigidbody
+    public Vector3 PlayerPosition;
 
     void Start()                                                                //This is the Start function
     {
-        rb2d = GetComponent<Rigidbody2D>();                                     //Initializes the rigidbody
+        PlayerBody = GetComponent<Rigidbody2D>();                                     //Initializes the rigidbody
     }
 
 
     void Update()                                                               //This is the update function
     {
         GetInput();                                                             //Calls the GetInput Function
+        PlayerPosition = this.transform.position;
     }
 
 
