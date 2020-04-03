@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public float PlayerSpeed;                                                   //Keeps Player Speed
-    private Vector2 PlayerDirection;                                            //Keeps track of PlayerDirection
-    private Rigidbody2D PlayerBody;                                                   //Keeps a reference to rigidbody
-    public Vector3 PlayerPosition;
+    public float PlayerSpeed;                                                    //Variable for Player speed
+    private Vector2 PlayerDirection;                                             //Variable for PlayerDirection
+    public Vector3 PlayerPosition;                                               //Variable for Player position
+    private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
 
-    void Start()                                                                //This is the Start function
+    void Start()                                                                 //This is the Start function
     {
-        PlayerBody = GetComponent<Rigidbody2D>();                                     //Initializes the rigidbody
+        PlayerBody = GetComponent<Rigidbody2D>();                                //Initializes the rigidbody
     }
 
 

@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    public GameObject Player;                                            //Public variable to store a reference to the player game object
-    private Vector3 Offset;                                              //Private variable to store the offset distance between the player and camera
-
+    private Vector3 StartPos;                                               //Variable for position before tracking
+    private Vector3 TargetPos;                                              //Variable for target position
+    public Transform FollowTarget;                                          //Gameobject (Put the player object in here)
+    public float FollowSpeed;                                               //Variable for the speed of the camera tracking
+    
+    
     void Start()
     {
-        Offset = transform.position - Player.transform.position;         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
+        StartPos = transform.position;                                      //Stores the starting position
     }
 
     void LateUpdate()
     {
-        transform.position = Player.transform.position + Offset;        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
+        TargetPos = new Vector3(FollowTarget.position.x, FollowTarget.position.y, transform.position.z);                //Updates target position to the FollowTarget's position
+        Vector3 Velocity = (TargetPos - transform.position) * FollowSpeed;                                              //Stores the distance between the current possition and the target position
+        transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref Velocity, 1.0f, Time.deltaTime);     //Moves the Camera to the target position using Smoothdamp function
     }
 }
