@@ -98,7 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpeed: 50
+  BulletTimer: 1
+  BulletDamage: 1
   rb: {fileID: 6475519756660773180}
+  ImpactEffect: {fileID: 1527798873151439036, guid: d81000be1f2304745ae69013f546fe14,
+    type: 3}
 --- !u!50 &6475519756660773180
 Rigidbody2D:
   serializedVersion: 4

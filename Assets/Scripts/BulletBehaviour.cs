@@ -5,8 +5,10 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     public float BulletSpeed = 20.0f;
-    public Rigidbody2D rb;
     public float BulletTimer = 1.0f;
+    public float BulletDamage = 1.0f;
+    public Rigidbody2D rb;
+    public GameObject ImpactEffect;
 
     void Start()
     {
@@ -22,7 +24,12 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (HitInfo.tag != "Player")
         {
-            Debug.Log(HitInfo.name);
+            GruntBehaviour Enemy = HitInfo.GetComponent<GruntBehaviour>();
+            if (Enemy)
+            {
+                Enemy.TakeDamage(BulletDamage);
+            }
+            Instantiate(ImpactEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
