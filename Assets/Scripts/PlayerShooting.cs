@@ -34,10 +34,14 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    IEnumerator Shoot()
+    void Shoot()
     {
-        //Instantiate(Bullet01, FirePoint01.position, FirePoint01.rotation);                    //Instantiates a Bullet
+        Instantiate(Bullet01, FirePoint01.position, FirePoint01.rotation);                    //Instantiates a Bullet
+        PlayerBullets -= 1;
+    }
 
+    IEnumerator RaycastShoot()
+    {
         RaycastHit2D HitInfo = Physics2D.Raycast(FirePoint01.position, FirePoint01.right);      //Uses raycast to draw a line from the player (fire point) in the direction of the gun
 
         if (HitInfo)                                                                            //If the raycast detects something
@@ -70,10 +74,11 @@ public class PlayerShooting : MonoBehaviour
 
     void GetInput()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets
+        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets
         {
-            FireTimer = 0.1f;                                                                   //Reset Firetimer
-            StartCoroutine(Shoot());                                                            //Calls Shooting coroutine
+            FireTimer = 0.074f;                                                                                                     //Reset Firetimer
+            Shoot();
+            //StartCoroutine(RaycastShoot());                                                                                       //Calls Shooting coroutine for raycast shooting
         } 
         if (Input.GetKey(KeyCode.R))
         {

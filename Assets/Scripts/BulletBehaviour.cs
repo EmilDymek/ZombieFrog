@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    public float BulletSpeed = 20.0f;
+    public float BulletSpeed = 200.0f;
     public float BulletTimer = 1.0f;
     public float BulletDamage = 1.0f;
     public Rigidbody2D rb;
@@ -22,7 +22,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D HitInfo)
     {
-        if (HitInfo.tag != "Player")
+        if (HitInfo.tag != "Player" && HitInfo.tag != "Bullet")
         {
             GruntBehaviour Enemy = HitInfo.GetComponent<GruntBehaviour>();
             if (Enemy)

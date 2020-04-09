@@ -1305,6 +1305,11 @@ PrefabInstance:
       propertyPath: ReloadDelay
       value: 0.65
       objectReference: {fileID: 0}
+    - target: {fileID: 4794979929733704910, guid: f247d3f87c99c234381d2f9ed1c34cae,
+        type: 3}
+      propertyPath: FireTimer
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4794979929900199200, guid: f247d3f87c99c234381d2f9ed1c34cae,
         type: 3}
       propertyPath: m_Name
