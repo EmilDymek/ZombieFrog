@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 46040955}
   - component: {fileID: 46040956}
+  - component: {fileID: 46040958}
+  - component: {fileID: 46040957}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -169,6 +171,30 @@ MonoBehaviour:
   playerShooting: {fileID: 236756879}
   Reloading: 0
   DisplayAmmount: 0
+--- !u!114 &46040957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46040954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf637483b19ba4448ecd0f0a8b61657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &46040958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46040954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1f1c87b5799604e9d81515ea105be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &236756879 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4794979929733704910, guid: f247d3f87c99c234381d2f9ed1c34cae,
@@ -493,7 +519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -555, y: -380}
+  m_AnchoredPosition: {x: -555, y: -440}
   m_SizeDelta: {x: 768.9, y: 52.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617581103
@@ -1003,7 +1029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -555, y: -440}
+  m_AnchoredPosition: {x: -555, y: -380}
   m_SizeDelta: {x: 768.9, y: 52.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860544001
@@ -1025,10 +1051,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 97d001e75e94058438db2aff247e2405, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1266,10 +1292,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 97d001e75e94058438db2aff247e2405, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1309,6 +1335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: FireTimer
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794979929733704910, guid: f247d3f87c99c234381d2f9ed1c34cae,
+        type: 3}
+      propertyPath: MagazineSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4794979929900199200, guid: f247d3f87c99c234381d2f9ed1c34cae,
         type: 3}
