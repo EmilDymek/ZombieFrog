@@ -10,6 +10,7 @@ public class BulletBehaviour : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject ImpactEffect;
 
+
     void Start()
     {
         rb.velocity = transform.right * BulletSpeed;
@@ -24,9 +25,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (HitInfo.tag != "Player" && HitInfo.tag != "Bullet")
         {
-            GruntBehaviour Enemy = HitInfo.GetComponent<GruntBehaviour>();
-            if (Enemy)
+            if (HitInfo.tag == "Enemy")
             {
+                GruntBehaviour Enemy = HitInfo.GetComponent<GruntBehaviour>();
                 Enemy.TakeDamage(BulletDamage);
             }
             Instantiate(ImpactEffect, transform.position, transform.rotation);

@@ -8,7 +8,6 @@ public class GruntBehaviour : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     void Update()
@@ -20,7 +19,7 @@ public class GruntBehaviour : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         GruntHealth -= Damage;
-
+        //RageTracker.RageTick();
         if (GruntHealth <= 0)
         {
             Die();

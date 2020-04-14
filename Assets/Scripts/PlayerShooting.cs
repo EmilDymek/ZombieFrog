@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public float FireTimer = 0.01f;                                          //Variable that sotres fire rate
+    public float FireTimer;                                          //Variable that sotres fire rate
     public float ReloadDelay = 1.0f;                                        //Variable that stores the time to reload
     public float GunDamage = 1.0f;                                          //Variable that stores bullet damage
     Vector3 MousePos;                                                       //Variable to store mouse position
@@ -28,23 +28,22 @@ public class PlayerShooting : MonoBehaviour
     {
         TurnGun();                                                          //Calls Turning function
         GetInput();                                                         //Calls the Input function
-        if (FireTimer > 0)
+        if (FireTimer >= 0)
         {
-            FireTimer -= Time.deltaTime;                                        //Ticks down Fire Timer (Time between shots)
+            FireTimer -= Time.deltaTime;                                    //Ticks down Fire Timer (Time between shots)
         }
     }
 
-    void Shoot()
+    void InstantiateShoot()
     {
         Instantiate(Bullet01, FirePoint01.position, FirePoint01.rotation);                    //Instantiates a Bullet
-        PlayerBullets -= 1;
     }
 
     IEnumerator RaycastShoot()
     {
         RaycastHit2D HitInfo = Physics2D.Raycast(FirePoint01.position, FirePoint01.right);      //Uses raycast to draw a line from the player (fire point) in the direction of the gun
 
-        if (HitInfo)                                                                            //If the raycast detects something
+        if (HitInfo && HitInfo.collider.tag != "Player")                                        //If the raycast detects something that isn't tagged as player 
         {
             GruntBehaviour Enemy = HitInfo.transform.GetComponent<GruntBehaviour>();            //Get the Enemy game component
             if (Enemy != null)                                                                  //If an enemy is detected
@@ -59,7 +58,6 @@ public class PlayerShooting : MonoBehaviour
             LineRend.SetPosition(0, FirePoint01.position);                                      //Sets first point of the line on the fire point position
             LineRend.SetPosition(1, FirePoint01.position + FirePoint01.right * 100);            //Sets the second point of the line 100 units away from the firepoint in the direction of the gun
         }
-        PlayerBullets -= 1;
         LineRend.enabled = true;                                                                //Draw the line
         yield return new WaitForSeconds(0.02f);                                                 //Wait for 0.02 seconds
         LineRend.enabled = false;                                                               //Hide the line
@@ -67,18 +65,19 @@ public class PlayerShooting : MonoBehaviour
 
     IEnumerator Reload()
     {
-        yield return new WaitForSeconds(ReloadDelay);
-        PlayerBullets = MagazineSize;
+        yield return new WaitForSeconds(ReloadDelay);                                           //Waits for the reload delay
+        PlayerBullets = MagazineSize;                                                           //Refills the players magazine
 
     }
 
     void GetInput()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets
+        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
         {
-            FireTimer = 0.074f;                                                                                                     //Reset Firetimer
-            Shoot();
-            //StartCoroutine(RaycastShoot());                                                                                       //Calls Shooting coroutine for raycast shooting
+            FireTimer = 0.075f;                                                                                                     //Reset Firetimer
+            PlayerBullets -= 1;                                                                                                     //Ticks down the player bullet count
+            InstantiateShoot();
+            //StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
         } 
         if (Input.GetKey(KeyCode.R))
         {
