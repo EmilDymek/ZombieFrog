@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &46040955 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2121983130631146305, guid: cbed29ebee9d0e44fadcbfe608e66306,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121983130655689786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &46040956 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2121983130631146310, guid: cbed29ebee9d0e44fadcbfe608e66306,
@@ -339,12 +345,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794979929900199204, guid: f247d3f87c99c234381d2f9ed1c34cae,
     type: 3}
   m_PrefabInstance: {fileID: 4794979929701430081}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1518086537 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2121983132103517619, guid: cbed29ebee9d0e44fadcbfe608e66306,
-    type: 3}
-  m_PrefabInstance: {fileID: 2121983130655689786}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1860543999
 GameObject:
@@ -599,22 +599,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1518086537}
+    m_TransformParent: {fileID: 46040955}
     m_Modifications:
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.910993
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2090893
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 680.2353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -639,7 +639,7 @@ PrefabInstance:
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 523193706740468064, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -666,6 +666,11 @@ PrefabInstance:
       propertyPath: rageTracker
       value: 
       objectReference: {fileID: 46040958}
+    - target: {fileID: 523193706740468069, guid: 54eefa6ead6124a439c5f6c00ea05478,
+        type: 3}
+      propertyPath: GruntHealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54eefa6ead6124a439c5f6c00ea05478, type: 3}
 --- !u!1001 &2121983130655689786
@@ -740,6 +745,36 @@ PrefabInstance:
       propertyPath: RageUI
       value: 
       objectReference: {fileID: 1860544001}
+    - target: {fileID: 2121983130631146308, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 46040959}
+    - target: {fileID: 2121983130631146309, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: PlayerMaxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121983130631146309, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: PlayerRageMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121983130631146309, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: PlayerRageTickAmount
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121983130631146309, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: PlayerCurrentBullets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121983130631146309, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: PlayerRageDecay
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2121983130631146310, guid: cbed29ebee9d0e44fadcbfe608e66306,
         type: 3}
       propertyPath: AmmoUI
@@ -750,11 +785,21 @@ PrefabInstance:
       propertyPath: playerShooting
       value: 
       objectReference: {fileID: 236756879}
+    - target: {fileID: 2121983130631146310, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: Reloading
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2121983130631146311, guid: cbed29ebee9d0e44fadcbfe608e66306,
         type: 3}
       propertyPath: HealthUI
       value: 
       objectReference: {fileID: 2101852930}
+    - target: {fileID: 2121983130631146311, guid: cbed29ebee9d0e44fadcbfe608e66306,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 46040959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbed29ebee9d0e44fadcbfe608e66306, type: 3}
 --- !u!1001 &4794979929701430081

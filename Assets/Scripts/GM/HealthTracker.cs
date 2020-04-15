@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class HealthTracker : MonoBehaviour
 {
     public Image HealthUI;
-    public float CurrentHealth;
-    public float MaxHealth;
     public float DisplayAmount;
+    public GameMaster GM;
 
     void Awake()
     {
-        CurrentHealth = MaxHealth;
+        GM.PlayerCurrentHealth = GM.PlayerMaxHealth;
     }
 
     void Update()
     {
-        DisplayAmount = CurrentHealth / MaxHealth;
+        DisplayAmount = GM.PlayerCurrentHealth / GM.PlayerMaxHealth;
         HealthUI.fillAmount = DisplayAmount;
     }
 

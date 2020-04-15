@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
     Vector3 MousePos;                                                       //Variable to store mouse position
     Vector3 GunPos;                                                         //Variable to store gun direction
+    private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
     public float Angle;                                                     //Variable to store the rotation
-    public float PlayerBullets;                                             //Variable that stores the current ammount of bullets in the player's gun
     public Transform Crosshair;                                             //Gameobject reference (Store the crosshair gameobject in here)
     public Transform FirePoint01;                                           //GameObject reference (Store FirePoint01 gameobject in here)
     public GameObject Bullet01;                                             //GameObject reference (Store Bullet Prefab in here)
@@ -19,6 +18,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
+        GM.PlayerCurrentBullets = GM.PlayerMagazineSize;
         ammoTracking.GetComponent<AmmoTracking>();                          //Instantiates the Ammotracking script within this one
     }
 
@@ -64,22 +64,22 @@ public class PlayerShooting : MonoBehaviour
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(GM.PlayerReloadDelay);                                           //Waits for the reload delay
-        PlayerBullets = GM.PlayerMagazineSize;                                                           //Refills the players magazine
+        GM.PlayerCurrentBullets = GM.PlayerMagazineSize;                                                           //Refills the players magazine
 
     }
 
     void GetInput()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
+        if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
         {
             FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
-            PlayerBullets -= 1;                                                                                                     //Ticks down the player bullet count
+            GM.PlayerCurrentBullets -= 1;                                                                                                     //Ticks down the player bullet count
             //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
             StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
         } 
         if (Input.GetKey(KeyCode.R))
         {
-            if (ammoTracking.Reloading == false && PlayerBullets != GM.PlayerMagazineSize)
+            if (ammoTracking.Reloading == false && GM.PlayerCurrentBullets != GM.PlayerMagazineSize)
             {
                 ammoTracking.Reloading = true;
                 ammoTracking.DisplayAmount = 0;
