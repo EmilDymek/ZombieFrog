@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public float FireTimer;                                          //Variable that sotres fire rate
-    public float ReloadDelay = 1.0f;                                        //Variable that stores the time to reload
-    public float GunDamage = 1.0f;                                          //Variable that stores bullet damage
+    private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
     Vector3 MousePos;                                                       //Variable to store mouse position
     Vector3 GunPos;                                                         //Variable to store gun direction
     public float Angle;                                                     //Variable to store the rotation
     public float PlayerBullets;                                             //Variable that stores the current ammount of bullets in the player's gun
-    public float MagazineSize;                                              //Variable that stores the fixed Magazine Size
-    public Transform Target;                                                //Gameobject reference (Store the crosshair gameobject in here)
+    public Transform Crosshair;                                             //Gameobject reference (Store the crosshair gameobject in here)
     public Transform FirePoint01;                                           //GameObject reference (Store FirePoint01 gameobject in here)
     public GameObject Bullet01;                                             //GameObject reference (Store Bullet Prefab in here)
     public GameObject ImpactEffect;                                         //Gameobject Reference (Store Impact Effect here)
     public LineRenderer LineRend;                                           //Reference to a linerenderer
-    public AmmoTracking ammoTracking;
+    public AmmoTracking ammoTracking;                                       //Reference to Ammotracking
+    public GameMaster GM;                                                   //Reference to the GM
 
     private void Awake()
     {
-        ammoTracking.GetComponent<AmmoTracking>();
+        ammoTracking.GetComponent<AmmoTracking>();                          //Instantiates the Ammotracking script within this one
     }
 
     void Update()
@@ -36,7 +34,7 @@ public class PlayerShooting : MonoBehaviour
 
     void InstantiateShoot()
     {
-        Instantiate(Bullet01, FirePoint01.position, FirePoint01.rotation);                    //Instantiates a Bullet
+        Instantiate(Bullet01, FirePoint01.position, FirePoint01.rotation);                      //Instantiates a Bullet
     }
 
     IEnumerator RaycastShoot()
@@ -48,7 +46,7 @@ public class PlayerShooting : MonoBehaviour
             GruntBehaviour Enemy = HitInfo.transform.GetComponent<GruntBehaviour>();            //Get the Enemy game component
             if (Enemy != null)                                                                  //If an enemy is detected
             {
-                Enemy.TakeDamage(GunDamage);                                                    //Call Takedamage function in the enemy script and send the Gun Damage variable
+                Enemy.TakeDamage(GM.PlayerGunDamage);                                           //Call Takedamage function in the enemy script and send the Gun Damage variable
             }
             Instantiate(ImpactEffect, HitInfo.point, Quaternion.identity);                      //Make an Impact effect, Where the bullet is, With locked rotation
             LineRend.SetPosition(0, FirePoint01.position);                                      //Sets first point of the line on the fire point position
@@ -65,8 +63,8 @@ public class PlayerShooting : MonoBehaviour
 
     IEnumerator Reload()
     {
-        yield return new WaitForSeconds(ReloadDelay);                                           //Waits for the reload delay
-        PlayerBullets = MagazineSize;                                                           //Refills the players magazine
+        yield return new WaitForSeconds(GM.PlayerReloadDelay);                                           //Waits for the reload delay
+        PlayerBullets = GM.PlayerMagazineSize;                                                           //Refills the players magazine
 
     }
 
@@ -74,17 +72,17 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && PlayerBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
         {
-            FireTimer = 0.075f;                                                                                                     //Reset Firetimer
+            FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
             PlayerBullets -= 1;                                                                                                     //Ticks down the player bullet count
-            InstantiateShoot();
-            //StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
+            //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
+            StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
         } 
         if (Input.GetKey(KeyCode.R))
         {
-            if (ammoTracking.Reloading == false && PlayerBullets != MagazineSize)
+            if (ammoTracking.Reloading == false && PlayerBullets != GM.PlayerMagazineSize)
             {
                 ammoTracking.Reloading = true;
-                ammoTracking.DisplayAmmount = 0;
+                ammoTracking.DisplayAmount = 0;
                 StartCoroutine(Reload());
             }
         }

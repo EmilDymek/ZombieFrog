@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public float PlayerSpeed;                                                    //Variable for Player speed
     private Vector2 PlayerDirection;                                             //Variable for PlayerDirection
     public Vector3 PlayerPosition;                                               //Variable for Player position
     private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
+    public GameMaster GM;
 
     void Start()                                                                 //This is the Start function
     {
@@ -42,6 +42,6 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
         }
 
-        transform.Translate(PlayerDirection * PlayerSpeed * Time.deltaTime);    //Moves the player according to the set direction
+        transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
     }
 }

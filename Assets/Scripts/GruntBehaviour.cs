@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GruntBehaviour : MonoBehaviour
 {
-    public float GruntHealth = 5;
+    public float GruntHealth;
+    public RageTracker rageTracker;
 
     void Start()
     {
+
     }
 
     void Update()
@@ -19,7 +21,7 @@ public class GruntBehaviour : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         GruntHealth -= Damage;
-        //RageTracker.RageTick();
+        rageTracker.RageTick();
         if (GruntHealth <= 0)
         {
             Die();

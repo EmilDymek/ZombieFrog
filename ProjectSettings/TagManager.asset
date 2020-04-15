@@ -7,6 +7,7 @@ TagManager:
   - User Interface
   - Bullet
   - Enemy
+  - GM
   layers:
   - Default
   - TransparentFX
