@@ -7,7 +7,6 @@ public class PlayerShooting : MonoBehaviour
     Vector3 MousePos;                                                       //Variable to store mouse position
     Vector3 GunPos;                                                         //Variable to store gun direction
     private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
-    public float Angle;                                                     //Variable to store the rotation
     public Transform Crosshair;                                             //Gameobject reference (Store the crosshair gameobject in here)
     public Transform FirePoint01;                                           //GameObject reference (Store FirePoint01 gameobject in here)
     public GameObject Bullet01;                                             //GameObject reference (Store Bullet Prefab in here)

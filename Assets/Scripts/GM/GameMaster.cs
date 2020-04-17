@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameMaster : MonoBehaviour
 {
     //HERE BE VARIABLES, CHECK GM FOR ALL VARIABLES
@@ -26,8 +26,4 @@ public class GameMaster : MonoBehaviour
     //Camera
     public float CameraFollowSpeed;                 //Stores the speed of which the camera will follow the player (Eg. 5)
 
-    private void Update()
-    {
-        
-    }
 }

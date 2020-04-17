@@ -19,9 +19,4 @@ public class HealthTracker : MonoBehaviour
         DisplayAmount = GM.PlayerCurrentHealth / GM.PlayerMaxHealth;
         HealthUI.fillAmount = DisplayAmount;
     }
-
-    public void TakeDamage(float Damage)
-    {
-
-    }
 }

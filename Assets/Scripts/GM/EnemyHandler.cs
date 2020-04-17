@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject GruntEnemy;
+    //Grunt Variables
+    public float GruntSpeed;
+    public float GruntStopDistance;
+    public float GruntRetreatDistance;
+    public float GruntFireRate;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
