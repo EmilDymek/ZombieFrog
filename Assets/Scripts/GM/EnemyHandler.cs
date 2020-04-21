@@ -11,4 +11,16 @@ public class EnemyHandler : MonoBehaviour
     public float GruntRetreatDistance;
     public float GruntFireRate;
 
+    public float TimeToSpawn = 5;
+    public float SpawnTimer = 0;
+
+    private void Update()
+    {
+        SpawnTimer -= Time.deltaTime;
+        if (SpawnTimer <= 0)
+        {
+            Instantiate(GruntEnemy);
+            SpawnTimer = TimeToSpawn;
+        }
+    }
 }

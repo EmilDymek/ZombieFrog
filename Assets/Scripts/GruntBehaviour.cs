@@ -7,15 +7,22 @@ public class GruntBehaviour : MonoBehaviour
     public float GruntHealth;
     private float FireTimer;
 
-    public RageTracker rageTracker;
-    public EnemyHandler EH;
     public Transform Player;
     public Transform Firepoint;
     public Transform Gun;
     public GameObject Bullet;
+    public GameObject GM;
+    public RageTracker rageTracker;
+    public EnemyHandler EH;
 
     void Awake()
     {
+        GM = GameObject.FindGameObjectWithTag("GM");
+        EH = GM.GetComponent<EnemyHandler>();
+        rageTracker = GM.GetComponent<RageTracker>();
+        //GameMaster.GetComponent<GameMaster>();
+        //EH.GetComponent<EnemyHandler>();
+        //rageTracker.GetComponent<RageTracker>();
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         FireTimer = EH.GruntFireRate;
     }
