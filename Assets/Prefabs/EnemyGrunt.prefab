@@ -291,7 +291,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Firepoint: {fileID: 5436536938464130945}
   Gun: {fileID: 5436536938882172230}
-  Bullet: {fileID: 2943107105363070895, guid: d3a73a5f04ecf4f45971aeaf7c3b9a45, type: 3}
+  Bullet: {fileID: 6821396340989098806, guid: ccab1eb412f76c24ab7945ef5b2352a1, type: 3}
   GM: {fileID: 0}
   rageTracker: {fileID: 0}
   EH: {fileID: 0}
