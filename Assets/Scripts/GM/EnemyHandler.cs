@@ -8,6 +8,7 @@ public class EnemyHandler : MonoBehaviour
     //Grunt Variables
     public float GruntSpeed;
     public float GruntStopDistance;
+    public float GruntFormationDistance;
     public float GruntRetreatDistance;
     public float GruntFireRate;
     public float GruntDamage;

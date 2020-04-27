@@ -14,6 +14,7 @@ public class GruntBehaviour : MonoBehaviour
     public GameObject GM;
     public RageTracker rageTracker;
     public EnemyHandler EH;
+    public GameObject[] OtherEnemies;
 
     void Awake()
     {
@@ -30,6 +31,11 @@ public class GruntBehaviour : MonoBehaviour
     void Update()
     {
         //Movement behaviour
+        OtherEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //if (Vector2.Distance(transform.position, OtherEnemies))
+        //{
+
+        //}
         if (Vector2.Distance(transform.position, Player.position) > EH.GruntStopDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
