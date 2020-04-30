@@ -6293,7 +6293,7 @@ PrefabInstance:
     - target: {fileID: 5146122742990353064, guid: cbed29ebee9d0e44fadcbfe608e66306,
         type: 3}
       propertyPath: DashRageCost
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5146122742990353065, guid: cbed29ebee9d0e44fadcbfe608e66306,
         type: 3}
