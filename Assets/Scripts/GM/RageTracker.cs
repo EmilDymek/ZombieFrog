@@ -6,23 +6,24 @@ using UnityEngine.UI;
 public class RageTracker : MonoBehaviour
 {
     public Image RageUI;                                                //Reference to the UI Image (CHECK GM)
+    public Text RageNumber;
     public GameMaster GM;
-    public float DisplayAmount;                                         //The Displayed amount of stored rage (CHECK GM, SHOULD ALWAYS BE 0)
 
     void Update()
     {
-        if (DisplayAmount > 0)
+        if (GM.PlayerCurrentRage > 0)
         {
-            DisplayAmount -= Time.deltaTime * GM.PlayerRageDecay;
+            GM.PlayerCurrentRage -= Time.deltaTime * GM.PlayerRageDecay;
         }
-        RageUI.fillAmount = DisplayAmount;
+        RageUI.fillAmount = GM.PlayerCurrentRage / GM.PlayerRageMax;
+        RageNumber.text = GM.PlayerCurrentRage.ToString("#.00");
     }
 
     public void RageTick()
     {
-        if (DisplayAmount < 1)
+        if (GM.PlayerCurrentRage < GM.PlayerRageMax)
         {
-            DisplayAmount = DisplayAmount + GM.PlayerRageTickAmount;
+            GM.PlayerCurrentRage += GM.PlayerRageTickAmount;
         }
     }
 }

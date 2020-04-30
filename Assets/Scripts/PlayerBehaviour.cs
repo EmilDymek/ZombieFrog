@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public Vector3 PlayerPosition;                                               //Variable for Player position
     private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
     public GameMaster GM;
+    bool PlayerDashing = false;
 
     void Start()                                                                 //This is the Start function
     {
@@ -19,6 +20,10 @@ public class PlayerBehaviour : MonoBehaviour
     {
         GetInput();                                                             //Calls the GetInput Function
         PlayerPosition = this.transform.position;
+        if (GM.PlayerDashTimer >= 0)
+        {
+            GM.PlayerDashTimer -= Time.deltaTime;
+        }
     }
 
 
@@ -40,6 +45,20 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetKey(KeyCode.D))                                            //Checks if D is being pressed
         {
             PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            PlayerDashing = true;
+        } else
+        {
+            PlayerDashing = false;
+        }
+
+        if (PlayerDashing && GM.PlayerDashTimer <= 0 && GM.PlayerCurrentRage >= GM.DashRageCost)
+        {
+            transform.Translate(PlayerDirection * GM.PlayerDashDistance);
+            GM.PlayerDashTimer = GM.PlayerDashCooldown;
+            GM.PlayerCurrentRage -= GM.DashRageCost;
         }
 
         transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction

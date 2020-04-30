@@ -20,8 +20,14 @@ public class GameMaster : MonoBehaviour
     public float PlayerCurrentRage;                 //Current Player Rage (Always start at 0)
     public float PlayerRageTickAmount;              //The amount of rage granted for each hit (eg. 0.075)
     public float PlayerRageDecay;                   //The rate of the Rage meter deterioration (Eg. 0.2)
+    //Player Dash
+    public float PlayerDashDistance;                //Stores the distance of the dash ability
+    public float PlayerDashCooldown;
+    public float PlayerDashTimer;
+    public float DashRageCost;
     //Player Other
     public float PlayerMoveSpeed;                   //Stores the speed of the player (Eg. 10)
+    
 
     //Camera
     public float CameraFollowSpeed;                 //Stores the speed of which the camera will follow the player (Eg. 5)

@@ -67,6 +67,7 @@ public class GruntBehaviour : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         GruntHealth -= Damage;
+        
         rageTracker.RageTick();
         if (GruntHealth <= 0)
         {
