@@ -8,9 +8,12 @@ public class HealthTracker : MonoBehaviour
     public Image HealthUI;
     public Text HealthNumber;
     public GameMaster GM;
+    public GameObject GMobj;
 
     void Awake()
     {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
         GM.PlayerCurrentHealth = GM.PlayerMaxHealth;
     }
 

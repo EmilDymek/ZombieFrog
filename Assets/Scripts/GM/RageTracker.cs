@@ -8,7 +8,13 @@ public class RageTracker : MonoBehaviour
     public Image RageUI;                                                //Reference to the UI Image (CHECK GM)
     public Text RageNumber;
     public GameMaster GM;
+    public GameObject GMobj;
 
+    private void Awake()
+    {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
+    }
     void Update()
     {
         if (GM.PlayerCurrentRage > 0)

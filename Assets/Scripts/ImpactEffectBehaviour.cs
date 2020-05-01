@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class ImpactEffectBehaviour : MonoBehaviour
 {
-    float EffectLife = 1.0f;
+    public GameMaster GM;
+    public EffectMaster EM;
+    public GameObject GMobj;
+
+    private void Awake()
+    {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
+        EM = GMobj.GetComponent<EffectMaster>();
+    }
 
     void Update()
     {
-        EffectLife -= Time.deltaTime;
-        if (EffectLife <= 0)
+        EM.ImpactEffectTimer -= Time.deltaTime;
+        if (EM.ImpactEffectTimer <= 0)
         {
             Destroy(gameObject);
         }

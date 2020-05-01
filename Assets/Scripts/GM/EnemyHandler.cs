@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
 {
+    public GameMaster GM;
+    public GameObject GMobj;
+
     public GameObject GruntEnemy;
     //Grunt Variables
     public float GruntSpeed;
@@ -18,6 +21,11 @@ public class EnemyHandler : MonoBehaviour
     public float TimeToSpawn = 5;
     public float SpawnTimer = 0;
 
+    private void Awake()
+    {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
+    }
     private void Update()
     {
         SpawnTimer -= Time.deltaTime;

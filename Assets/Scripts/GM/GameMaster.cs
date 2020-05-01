@@ -31,6 +31,7 @@ public class GameMaster : MonoBehaviour
     public float StunRageCost;
     public float QuakeDuration;
     public float QuakeGrowth;
+    public float StunDuration;
     //Player Other
     public float PlayerMoveSpeed;                   //Stores the speed of the player (Eg. 10)
     

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    public GameMaster GM;
     public EnemyHandler EH;
-    public GameObject GM;
+    public GameObject GMobj;
+
     public Rigidbody2D rb;
     public GameObject ImpactEffect;
     private float BulletTimer;
@@ -13,8 +15,9 @@ public class EnemyBullet : MonoBehaviour
 
     void Start()
     {
-        GM = GameObject.FindGameObjectWithTag("GM");
-        EH = GM.GetComponent<EnemyHandler>();
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
+        EH = GMobj.GetComponent<EnemyHandler>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * EH.GruntBulletSpeed;
         BulletTimer = EH.GruntBulletTimer;
@@ -30,14 +33,11 @@ public class EnemyBullet : MonoBehaviour
     {
         if (HitInfo.tag == "Player")
         {
-            if (HitInfo.tag == "Player")
-            {
-                GameMaster Player = GM.GetComponent<GameMaster>();
-                Player.PlayerCurrentHealth -= EH.GruntDamage;
-            }
-            Instantiate(ImpactEffect, transform.position, transform.rotation);
-            Destroy(gameObject);
+            GameMaster Player = GM.GetComponent<GameMaster>();
+            Player.PlayerCurrentHealth -= EH.GruntDamage;
         }
+        Instantiate(ImpactEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
     private void BulletUpdate()

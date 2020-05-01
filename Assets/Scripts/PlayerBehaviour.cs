@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public GameMaster GM;
+    public GameObject GMobj;
+
     private Vector2 PlayerDirection;                                             //Variable for PlayerDirection
     public Vector3 PlayerPosition;                                               //Variable for Player position
     private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
-    public GameMaster GM;
     bool PlayerDashing = false;
     bool PlayerStunning = false;
     public GameObject Stun;
-
-    void Start()                                                                 //This is the Start function
+    
+    void Awake()                                                                 //This is the Start function
     {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
         PlayerBody = GetComponent<Rigidbody2D>();                                //Initializes the rigidbody
     }
 
@@ -25,6 +29,10 @@ public class PlayerBehaviour : MonoBehaviour
         if (GM.PlayerDashTimer >= 0)
         {
             GM.PlayerDashTimer -= Time.deltaTime;
+        }
+        if (GM.StunTimer >= 0)
+        {
+            GM.StunTimer -= Time.deltaTime;
         }
     }
 

@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
+    public GameMaster GM;
+    public GameObject GMobj;
+
     private Vector3 StartPos;                                               //Variable for position before tracking
     private Vector3 TargetPos;                                              //Variable for target position
     public Transform FollowTarget;                                          //Gameobject (Put the player object in here)
-    public GameMaster GM;
     
-    void Start()
+    void Awake()
     {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
         StartPos = transform.position;                                      //Stores the starting position
     }
 

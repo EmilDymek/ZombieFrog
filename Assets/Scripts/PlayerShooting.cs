@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public GameMaster GM;                                                   //Reference to the GM
+    public GameObject GMobj;
+
     Vector3 MousePos;                                                       //Variable to store mouse position
     Vector3 GunPos;                                                         //Variable to store gun direction
     private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
@@ -13,10 +16,11 @@ public class PlayerShooting : MonoBehaviour
     public GameObject ImpactEffect;                                         //Gameobject Reference (Store Impact Effect here)
     public LineRenderer LineRend;                                           //Reference to a linerenderer
     public AmmoTracking ammoTracking;                                       //Reference to Ammotracking
-    public GameMaster GM;                                                   //Reference to the GM
-
+    
     private void Awake()
     {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
         GM.PlayerCurrentBullets = GM.PlayerMagazineSize;
         ammoTracking.GetComponent<AmmoTracking>();                          //Instantiates the Ammotracking script within this one
     }

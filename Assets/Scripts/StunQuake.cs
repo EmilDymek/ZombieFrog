@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class StunQuake : MonoBehaviour
 {
-    private float QuakeTimer;
-    private CircleCollider2D QuakeCollider;
     public GameMaster GM;
     public GameObject GMobj;
+
+    private float QuakeTimer;
+    private CircleCollider2D QuakeCollider;
 
     void Awake()
     {
@@ -25,6 +26,15 @@ public class StunQuake : MonoBehaviour
         if (QuakeTimer <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D HitInfo)
+    {
+        if (HitInfo.tag == "Enemy")
+        {
+            GruntBehaviour Enemy = HitInfo.GetComponent<GruntBehaviour>();
+            Enemy.TakeStun();
         }
     }
 }
