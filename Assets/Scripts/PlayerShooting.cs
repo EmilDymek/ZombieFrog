@@ -22,7 +22,7 @@ public class PlayerShooting : MonoBehaviour
         GMobj = GameObject.Find("GM");
         GM = GMobj.GetComponent<GameMaster>();
         GM.PlayerCurrentBullets = GM.PlayerMagazineSize;
-        ammoTracking.GetComponent<AmmoTracking>();                          //Instantiates the Ammotracking script within this one
+        ammoTracking = GMobj.GetComponent<AmmoTracking>();
     }
 
     void Update()

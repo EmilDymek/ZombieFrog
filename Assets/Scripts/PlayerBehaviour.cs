@@ -26,10 +26,13 @@ public class PlayerBehaviour : MonoBehaviour
     {
         GetInput();                                                             //Calls the GetInput Function
         PlayerPosition = this.transform.position;
+
+        //Dashtimer
         if (GM.PlayerDashTimer >= 0)
         {
             GM.PlayerDashTimer -= Time.deltaTime;
         }
+        //Stuntimer
         if (GM.StunTimer >= 0)
         {
             GM.StunTimer -= Time.deltaTime;
@@ -39,6 +42,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void GetInput()                                                             //This function checks for player input and moves the direction of movement accordingly
     {
+        //Player movement
         PlayerDirection = Vector2.zero;                                         //Zeroes the cameras direction
         if (Input.GetKey(KeyCode.W))                                            //Checks if W is being pressed
         {
@@ -57,13 +61,15 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        //Player abilities
+        if (Input.GetKey(KeyCode.LeftShift) && PlayerDirection != Vector2.zero)
         {
             PlayerDashing = true;
         } else
         {
             PlayerDashing = false;
         }
+        transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
 
         if (Input.GetKey(KeyCode.F))
         {
@@ -72,30 +78,38 @@ public class PlayerBehaviour : MonoBehaviour
         {
             PlayerStunning = false;
         }
+        
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            PlayerMelee();
+        }
 
         if (PlayerDashing && GM.PlayerDashTimer <= 0 && GM.PlayerCurrentRage >= GM.DashRageCost)
         {
             PlayerDash();
+            GM.PlayerDashTimer = GM.PlayerDashCooldown;
+            GM.PlayerCurrentRage -= GM.DashRageCost;
         }
         if (PlayerStunning && GM.StunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
         {
             PlayerStun();
+            GM.StunTimer = GM.StunCooldown;
+            GM.PlayerCurrentRage -= GM.StunRageCost;
         }
 
-        transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
+        //Player shooting found in Player Shooting script
     }
 
     public void PlayerDash()
     {
-        transform.Translate(PlayerDirection * GM.PlayerDashDistance);
-        GM.PlayerDashTimer = GM.PlayerDashCooldown;
-        GM.PlayerCurrentRage -= GM.DashRageCost;
+        transform.Translate(PlayerDirection * GM.PlayerDashDistance * Time.deltaTime);
     }
     public void PlayerStun()
     {
         Instantiate(Stun);
-        GM.StunTimer = GM.StunCooldown;
-        GM.PlayerCurrentRage -= GM.StunRageCost;
     }
-    
+    public void PlayerMelee()
+    {
+        Debug.Log("Player Melee Logic not added yet");
+    }
 }
