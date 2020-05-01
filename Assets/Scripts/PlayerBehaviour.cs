@@ -9,6 +9,8 @@ public class PlayerBehaviour : MonoBehaviour
     private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
     public GameMaster GM;
     bool PlayerDashing = false;
+    bool PlayerStunning = false;
+    public GameObject Stun;
 
     void Start()                                                                 //This is the Start function
     {
@@ -46,6 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
         }
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             PlayerDashing = true;
@@ -54,13 +57,37 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDashing = false;
         }
 
+        if (Input.GetKey(KeyCode.F))
+        {
+            PlayerStunning = true;
+        } else
+        {
+            PlayerStunning = false;
+        }
+
         if (PlayerDashing && GM.PlayerDashTimer <= 0 && GM.PlayerCurrentRage >= GM.DashRageCost)
         {
-            transform.Translate(PlayerDirection * GM.PlayerDashDistance);
-            GM.PlayerDashTimer = GM.PlayerDashCooldown;
-            GM.PlayerCurrentRage -= GM.DashRageCost;
+            PlayerDash();
+        }
+        if (PlayerStunning && GM.StunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
+        {
+            PlayerStun();
         }
 
         transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
     }
+
+    public void PlayerDash()
+    {
+        transform.Translate(PlayerDirection * GM.PlayerDashDistance);
+        GM.PlayerDashTimer = GM.PlayerDashCooldown;
+        GM.PlayerCurrentRage -= GM.DashRageCost;
+    }
+    public void PlayerStun()
+    {
+        Instantiate(Stun);
+        GM.StunTimer = GM.StunCooldown;
+        GM.PlayerCurrentRage -= GM.StunRageCost;
+    }
+    
 }

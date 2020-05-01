@@ -25,6 +25,12 @@ public class GameMaster : MonoBehaviour
     public float PlayerDashCooldown;
     public float PlayerDashTimer;
     public float DashRageCost;
+    //Player Stun
+    public float StunCooldown;
+    public float StunTimer;
+    public float StunRageCost;
+    public float QuakeDuration;
+    public float QuakeGrowth;
     //Player Other
     public float PlayerMoveSpeed;                   //Stores the speed of the player (Eg. 10)
     

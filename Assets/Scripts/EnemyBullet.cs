@@ -8,6 +8,7 @@ public class EnemyBullet : MonoBehaviour
     public GameObject GM;
     public Rigidbody2D rb;
     public GameObject ImpactEffect;
+    private float BulletTimer;
 
 
     void Start()
@@ -16,11 +17,13 @@ public class EnemyBullet : MonoBehaviour
         EH = GM.GetComponent<EnemyHandler>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * EH.GruntBulletSpeed;
+        BulletTimer = EH.GruntBulletTimer;
     }
 
     void Update()
     {
         BulletUpdate();
+        BulletTimer -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D HitInfo)
@@ -39,8 +42,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void BulletUpdate()
     {
-        EH.GruntBulletTimer -= Time.deltaTime;
-        if (EH.GruntBulletTimer <= 0)
+        if (BulletTimer <= 0)
         {
             Destroy(gameObject);
         }
