@@ -86,7 +86,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (PlayerDashing && GM.PlayerDashTimer <= 0 && GM.PlayerCurrentRage >= GM.DashRageCost)
         {
-            PlayerDash();
+            //PlayerDash();
             GM.PlayerDashTimer = GM.PlayerDashCooldown;
             GM.PlayerCurrentRage -= GM.DashRageCost;
         }
@@ -100,10 +100,10 @@ public class PlayerBehaviour : MonoBehaviour
         //Player shooting found in Player Shooting script
     }
 
-    public void PlayerDash()
-    {
-        transform.Translate(PlayerDirection * GM.PlayerDashDistance * Time.deltaTime);
-    }
+    //public void PlayerDash()
+    //{
+    //    transform.Translate(PlayerDirection * GM.PlayerDashDistance * Time.deltaTime);
+    //}
     public void PlayerStun()
     {
         Instantiate(Stun);
