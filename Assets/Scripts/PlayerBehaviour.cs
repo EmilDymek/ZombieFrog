@@ -8,6 +8,9 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject GMobj;
 
     private Vector2 PlayerDirection;                                             //Variable for PlayerDirection
+    public float MoveHorizontal;
+    public float MoveVertical;
+
     public Vector3 PlayerPosition;                                               //Variable for Player position
     private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
     bool PlayerDashing = false;
@@ -21,8 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
         PlayerBody = GetComponent<Rigidbody2D>();                                //Initializes the rigidbody
     }
 
-
-    void Update()                                                               //This is the update function
+    void FixedUpdate()                                                               //This is the update function
     {
         GetInput();                                                             //Calls the GetInput Function
         PlayerPosition = this.transform.position;
@@ -43,6 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
     void GetInput()                                                             //This function checks for player input and moves the direction of movement accordingly
     {
         //Player movement
+
         PlayerDirection = Vector2.zero;                                         //Zeroes the cameras direction
         if (Input.GetKey(KeyCode.W))                                            //Checks if W is being pressed
         {
@@ -61,15 +64,20 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
         }
 
+        //MoveHorizontal = Input.GetAxis("Horizontal");
+        //MoveVertical = Input.GetAxis("Vertical");
+
         //Player abilities
-        if (Input.GetKey(KeyCode.LeftShift) && PlayerDirection != Vector2.zero)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             PlayerDashing = true;
         } else
         {
             PlayerDashing = false;
         }
-        transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
+
+        //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
+        PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed;
 
         if (Input.GetKey(KeyCode.F))
         {

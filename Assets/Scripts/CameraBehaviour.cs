@@ -18,7 +18,7 @@ public class CameraBehaviour : MonoBehaviour
         StartPos = transform.position;                                      //Stores the starting position
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         TargetPos = new Vector3(FollowTarget.position.x, FollowTarget.position.y, transform.position.z);                //Updates target position to the FollowTarget's position
         Vector3 Velocity = (TargetPos - transform.position) * GM.CameraFollowSpeed;                                     //Stores the distance between the current possition and the target position
