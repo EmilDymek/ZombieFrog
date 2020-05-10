@@ -16,6 +16,10 @@ public class PlayerBehaviour : MonoBehaviour
     bool PlayerDashing = false;
     bool PlayerStunning = false;
     public GameObject Stun;
+
+    //TEMP
+    float DashDistance = 0.18f;
+    float DashCountdown = 0.18f;
     
     void Awake()                                                                 //This is the Start function
     {
@@ -68,16 +72,32 @@ public class PlayerBehaviour : MonoBehaviour
         //MoveVertical = Input.GetAxis("Vertical");
 
         //Player abilities
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && GM.PlayerDashTimer <= 0)
         {
             PlayerDashing = true;
-        } else
+            GM.PlayerDashTimer = GM.PlayerDashCooldown;
+        }
+
+        if (DashDistance >= 0 && PlayerDashing == true)
+        {
+            DashDistance -= Time.deltaTime;
+        }
+
+        if (DashDistance <= 0)
         {
             PlayerDashing = false;
+            DashDistance = DashCountdown;
         }
 
         //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
-        PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed;
+        if (PlayerDashing == true)
+        {
+            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * 7;
+        }
+        else
+        {
+            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed;
+        }
 
         if (Input.GetKey(KeyCode.F))
         {
