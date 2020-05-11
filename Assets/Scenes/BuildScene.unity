@@ -14016,7 +14016,6 @@ Transform:
   - {fileID: 1697105366}
   - {fileID: 321506131}
   - {fileID: 622403652}
-  - {fileID: 715537095}
   - {fileID: 880269789}
   - {fileID: 398314079}
   - {fileID: 255776030}
@@ -21172,12 +21171,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &715537095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
-    type: 3}
-  m_PrefabInstance: {fileID: 1334489341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716158875
 GameObject:
   m_ObjectHideFlags: 0
