@@ -33985,10 +33985,12 @@ MonoBehaviour:
   PlayerCurrentRage: 0
   PlayerRageTickAmount: 5
   PlayerRageDecay: 2
-  PlayerDashDistance: 20
-  PlayerDashCooldown: 1
-  PlayerDashTimer: 0
+  DashCooldown: 2
+  DashTimer: 0
   DashRageCost: 1
+  DashDistance: 5
+  DashDuration: 0.1
+  DashDurationTimer: 0
   StunCooldown: 3
   StunTimer: 0
   StunRageCost: 50
