@@ -25,6 +25,8 @@ public class GameMaster : MonoBehaviour
     public float PlayerDashCooldown;
     public float PlayerDashTimer;
     public float DashRageCost;
+    public float DashDistance;
+    public float DashCountdown;
     //Player Stun
     public float StunCooldown;
     public float StunTimer;

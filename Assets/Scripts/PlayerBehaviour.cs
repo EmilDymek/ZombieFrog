@@ -16,10 +16,6 @@ public class PlayerBehaviour : MonoBehaviour
     bool PlayerDashing = false;
     bool PlayerStunning = false;
     public GameObject Stun;
-
-    //TEMP
-    float DashDistance = 0.18f;
-    float DashCountdown = 0.18f;
     
     void Awake()                                                                 //This is the Start function
     {
@@ -78,15 +74,15 @@ public class PlayerBehaviour : MonoBehaviour
             GM.PlayerDashTimer = GM.PlayerDashCooldown;
         }
 
-        if (DashDistance >= 0 && PlayerDashing == true)
+        if (GM.DashDistance >= 0 && PlayerDashing == true)
         {
-            DashDistance -= Time.deltaTime;
+            GM.DashDistance -= Time.deltaTime;
         }
 
-        if (DashDistance <= 0)
+        if (GM.DashDistance <= 0)
         {
             PlayerDashing = false;
-            DashDistance = DashCountdown;
+            GM.DashDistance = GM.DashCountdown;
         }
 
         //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
