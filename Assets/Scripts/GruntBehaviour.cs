@@ -86,7 +86,7 @@ public class GruntBehaviour : MonoBehaviour
     public void TakeStun()
     {
         IsStunned = true;
-        StunTimer = 5;
+        StunTimer = GM.QuakeDuration;
     }
 
     void Die()

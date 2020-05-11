@@ -44,7 +44,7 @@ public class PlayerShooting : MonoBehaviour
     {
         RaycastHit2D HitInfo = Physics2D.Raycast(FirePoint01.position, FirePoint01.right);      //Uses raycast to draw a line from the player (fire point) in the direction of the gun
 
-        if (HitInfo && HitInfo.collider.tag != "Player")                                        //If the raycast detects something that isn't tagged as player 
+        if (HitInfo && HitInfo.collider.tag != "Player" && HitInfo.collider.tag != "Stun" && HitInfo.collider.tag != "Bullet")                                        //If the raycast detects something that isn't tagged as player 
         {
             GruntBehaviour Enemy = HitInfo.transform.GetComponent<GruntBehaviour>();            //Get the Enemy game component
             if (Enemy != null)                                                                  //If an enemy is detected

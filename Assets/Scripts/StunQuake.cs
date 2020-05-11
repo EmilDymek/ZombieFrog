@@ -20,7 +20,7 @@ public class StunQuake : MonoBehaviour
 
     void Update()
     {
-        QuakeCollider.radius += GM.QuakeGrowth * Time.deltaTime;
+        transform.localScale += Vector3.one * GM.QuakeGrowth * Time.deltaTime;
         QuakeTimer -= Time.deltaTime;
 
         if (QuakeTimer <= 0)
