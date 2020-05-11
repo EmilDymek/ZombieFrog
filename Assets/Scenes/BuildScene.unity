@@ -14016,7 +14016,6 @@ Transform:
   - {fileID: 1697105366}
   - {fileID: 321506131}
   - {fileID: 622403652}
-  - {fileID: 715537095}
   - {fileID: 880269789}
   - {fileID: 398314079}
   - {fileID: 255776030}
@@ -21172,12 +21171,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &715537095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
-    type: 3}
-  m_PrefabInstance: {fileID: 1334489341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716158875
 GameObject:
   m_ObjectHideFlags: 0
@@ -34984,11 +34977,11 @@ MonoBehaviour:
   PlayerCurrentRage: 0
   PlayerRageTickAmount: 5
   PlayerRageDecay: 2
-  DashCooldown: 2
+  DashCooldown: 0.7
   DashTimer: 0
-  DashRageCost: 1
-  DashDistance: 5
-  DashDuration: 0.1
+  DashRageCost: 20
+  DashDistance: 2.5
+  DashDuration: 0.21
   DashDurationTimer: 0
   StunCooldown: 3
   StunTimer: 0
