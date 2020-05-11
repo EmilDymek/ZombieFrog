@@ -34950,6 +34950,7 @@ MonoBehaviour:
   GruntDamage: 5
   GruntBulletSpeed: 20
   GruntBulletTimer: 5
+  GruntHealth: 10
   TimeToSpawn: 10
   SpawnTimer: 0
 --- !u!114 &1226176563
