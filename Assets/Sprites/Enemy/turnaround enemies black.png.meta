@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 56dbc7d49c42e3643a6544c367fc9f6a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6619154114307603263
+    second: turnaround enemies black_0
+  - first:
+      213: -5108050715112590740
+    second: turnaround enemies black_1
+  - first:
+      213: -6385533016536643909
+    second: turnaround enemies black_2
+  - first:
+      213: 7537973193202306735
+    second: turnaround enemies black_3
+  - first:
+      213: 5436216294888025712
+    second: turnaround enemies black_4
+  - first:
+      213: -7614467646776679428
+    second: turnaround enemies black_5
+  - first:
+      213: -2554532239159896781
+    second: turnaround enemies black_6
+  - first:
+      213: -2345571821368750417
+    second: turnaround enemies black_7
+  - first:
+      213: -4020226283072279826
+    second: turnaround enemies black_8
+  - first:
+      213: -4572016798488154013
+    second: turnaround enemies black_9
+  - first:
+      213: 2663344847661422632
+    second: turnaround enemies black_10
+  - first:
+      213: -931097876092816108
+    second: turnaround enemies black_11
+  - first:
+      213: -267346058997937432
+    second: turnaround enemies black_12
+  - first:
+      213: 6744219096664857826
+    second: turnaround enemies black_13
+  - first:
+      213: -6479851860447123817
+    second: turnaround enemies black_14
+  - first:
+      213: -1502653161343224940
+    second: turnaround enemies black_15
+  - first:
+      213: -7320384215701015319
+    second: turnaround enemies black_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +91,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +122,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: turnaround enemies black_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 652
+        width: 84
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4412f176a0424a0800000000000000
+      internalID: -6619154114307603263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 647
+        width: 87
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62b80f20fe8c19b0800000000000000
+      internalID: -5108050715112590740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 651
+        width: 110
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb60ecfad870267a0800000000000000
+      internalID: -6385533016536643909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 650
+        width: 119
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eadfafae1517b40800000000000000
+      internalID: 5436216294888025712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 440
+        width: 102
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3eb28b40af35690800000000000000
+      internalID: -7614467646776679428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 435
+        width: 102
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3355795867a7c8cd0800000000000000
+      internalID: -2554532239159896781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_7
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 436
+        width: 114
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae46281bdad27fd0800000000000000
+      internalID: -2345571821368750417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_8
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 438
+        width: 118
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaa9c0ee794538c0800000000000000
+      internalID: -4020226283072279826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 234
+        width: 82
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360bef202feec80c0800000000000000
+      internalID: -4572016798488154013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 230
+        width: 88
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828d937270a16f420800000000000000
+      internalID: 2663344847661422632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_11
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 234
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415fd543a631413f0800000000000000
+      internalID: -931097876092816108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_12
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 233
+        width: 118
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eac3510d223a4cf0800000000000000
+      internalID: -267346058997937432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_13
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 32
+        width: 83
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec5d183987489d50800000000000000
+      internalID: 6744219096664857826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_14
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 21
+        width: 89
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79625ec8011f216a0800000000000000
+      internalID: -6479851860447123817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_15
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 32
+        width: 112
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493f48149e0852be0800000000000000
+      internalID: -1502653161343224940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnaround enemies black_16
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 34
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4b3c34755c86a90800000000000000
+      internalID: -7320384215701015319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
