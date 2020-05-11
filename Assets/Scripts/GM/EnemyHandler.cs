@@ -17,6 +17,7 @@ public class EnemyHandler : MonoBehaviour
     public float GruntDamage;
     public float GruntBulletSpeed;
     public float GruntBulletTimer;
+    public float GruntHealth;
 
     public float TimeToSpawn = 5;
     public float SpawnTimer = 0;

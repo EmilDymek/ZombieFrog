@@ -8,7 +8,7 @@ public class GruntBehaviour : MonoBehaviour
     public EnemyHandler EH;
     public GameObject GMobj;
 
-    public float GruntHealth;
+    private float ThisGruntHealth;
     private float FireTimer;
     private bool IsStunned = false;
     private float StunTimer;
@@ -28,6 +28,7 @@ public class GruntBehaviour : MonoBehaviour
         rageTracker = GM.GetComponent<RageTracker>();
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         FireTimer = EH.GruntFireRate;
+        ThisGruntHealth = EH.GruntHealth;
     }
 
     void Update()
@@ -74,10 +75,10 @@ public class GruntBehaviour : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        GruntHealth -= Damage;
+        ThisGruntHealth -= Damage;
         
         rageTracker.RageTick();
-        if (GruntHealth <= 0)
+        if (ThisGruntHealth <= 0)
         {
             Die();
         }

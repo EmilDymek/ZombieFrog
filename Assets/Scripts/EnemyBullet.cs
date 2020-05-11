@@ -31,13 +31,17 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D HitInfo)
     {
-        if (HitInfo.tag == "Player")
+        if (HitInfo.tag != "Enemy")
         {
-            GameMaster Player = GM.GetComponent<GameMaster>();
-            Player.PlayerCurrentHealth -= EH.GruntDamage;
+
+            if (HitInfo.tag == "Player")
+            {
+                GameMaster Player = GM.GetComponent<GameMaster>();
+                Player.PlayerCurrentHealth -= EH.GruntDamage;
+            }
+            Instantiate(ImpactEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
-        Instantiate(ImpactEffect, transform.position, transform.rotation);
-        Destroy(gameObject);
     }
 
     private void BulletUpdate()
