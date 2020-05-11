@@ -134,7 +134,7 @@ public class PlayerBehaviour : MonoBehaviour
     //}
     public void PlayerStun()
     {
-        Instantiate(Stun);
+        Instantiate(Stun, transform.position, transform.rotation);
     }
     public void PlayerMelee()
     {
