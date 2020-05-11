@@ -6,6 +6,7 @@ public class EnemyHandler : MonoBehaviour
 {
     public GameMaster GM;
     public GameObject GMobj;
+    public bool EnemySpawn;
 
     public GameObject GruntEnemy;
     //Grunt Variables
@@ -29,11 +30,14 @@ public class EnemyHandler : MonoBehaviour
     }
     private void Update()
     {
-        SpawnTimer -= Time.deltaTime;
-        if (SpawnTimer <= 0)
+        if (EnemySpawn)
         {
-            Instantiate(GruntEnemy);
-            SpawnTimer = TimeToSpawn;
+            SpawnTimer -= Time.deltaTime;
+            if (SpawnTimer <= 0)
+            {
+                Instantiate(GruntEnemy);
+                SpawnTimer = TimeToSpawn;
+            }
         }
     }
 }
