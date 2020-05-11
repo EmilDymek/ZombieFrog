@@ -24,15 +24,19 @@ public class PlayerBehaviour : MonoBehaviour
         PlayerBody = GetComponent<Rigidbody2D>();                                //Initializes the rigidbody
     }
 
-    void FixedUpdate()                                                               //This is the update function
+    void FixedUpdate()                                                           //This is the update function
     {
-        GetInput();                                                             //Calls the GetInput Function
+        GetInput();                                                              //Calls the GetInput Function
+        Timers();
         PlayerPosition = this.transform.position;
+    }
 
+    void Timers()
+    {
         //Dashtimer
-        if (GM.PlayerDashTimer >= 0)
+        if (GM.DashTimer >= 0)
         {
-            GM.PlayerDashTimer -= Time.deltaTime;
+            GM.DashTimer -= Time.deltaTime;
         }
         //Stuntimer
         if (GM.StunTimer >= 0)
@@ -68,27 +72,28 @@ public class PlayerBehaviour : MonoBehaviour
         //MoveVertical = Input.GetAxis("Vertical");
 
         //Player abilities
-        if (Input.GetKey(KeyCode.LeftShift) && GM.PlayerDashTimer <= 0)
+        if (Input.GetKey(KeyCode.LeftShift) && GM.DashTimer <= 0 && GM.PlayerCurrentRage > GM.DashRageCost)
         {
             PlayerDashing = true;
-            GM.PlayerDashTimer = GM.PlayerDashCooldown;
+            GM.DashTimer = GM.DashCooldown;
+            GM.PlayerCurrentRage -= GM.DashRageCost;
         }
 
-        if (GM.DashDistance >= 0 && PlayerDashing == true)
+        if (GM.DashDurationTimer >= 0 && PlayerDashing == true)
         {
-            GM.DashDistance -= Time.deltaTime;
+            GM.DashDurationTimer -= Time.deltaTime;
         }
 
-        if (GM.DashDistance <= 0)
+        if (GM.DashDurationTimer <= 0)
         {
             PlayerDashing = false;
-            GM.DashDistance = GM.DashCountdown;
+            GM.DashDurationTimer = GM.DashDuration;
         }
 
         //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
         if (PlayerDashing == true)
         {
-            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * 7;
+            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * GM.DashDistance;
         }
         else
         {
@@ -108,12 +113,6 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerMelee();
         }
 
-        if (PlayerDashing && GM.PlayerDashTimer <= 0 && GM.PlayerCurrentRage >= GM.DashRageCost)
-        {
-            //PlayerDash();
-            GM.PlayerDashTimer = GM.PlayerDashCooldown;
-            GM.PlayerCurrentRage -= GM.DashRageCost;
-        }
         if (PlayerStunning && GM.StunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
         {
             PlayerStun();
@@ -124,10 +123,6 @@ public class PlayerBehaviour : MonoBehaviour
         //Player shooting found in Player Shooting script
     }
 
-    //public void PlayerDash()
-    //{
-    //    transform.Translate(PlayerDirection * GM.PlayerDashDistance * Time.deltaTime);
-    //}
     public void PlayerStun()
     {
         Instantiate(Stun, transform.position, transform.rotation);

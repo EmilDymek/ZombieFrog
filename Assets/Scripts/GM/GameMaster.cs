@@ -21,12 +21,14 @@ public class GameMaster : MonoBehaviour
     public float PlayerRageTickAmount;              //The amount of rage granted for each hit (eg. 0.075)
     public float PlayerRageDecay;                   //The rate of the Rage meter deterioration (Eg. 0.2)
     //Player Dash
-    public float PlayerDashDistance;                //Stores the distance of the dash ability
-    public float PlayerDashCooldown;
-    public float PlayerDashTimer;
+    //public float PlayerDashDistance;                //Stores the distance of the dash ability
+    public float DashCooldown;
+    public float DashTimer;
     public float DashRageCost;
     public float DashDistance;
-    public float DashCountdown;
+    public float DashDuration;
+    public float DashDurationTimer;
+    //public float DashCountdown;
     //Player Stun
     public float StunCooldown;
     public float StunTimer;
