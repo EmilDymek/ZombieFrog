@@ -335,7 +335,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1543,7 +1542,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3174,7 +3172,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -7528,7 +7526,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7688,7 +7685,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9216,7 +9212,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -10099,7 +10095,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10831,7 +10826,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -12970,15 +12965,15 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.6675885
+  m_UseAutoMass: 0
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &407734965
 MonoBehaviour:
@@ -14410,7 +14405,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -19870,7 +19865,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -22213,7 +22208,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -23400,7 +23395,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -24889,7 +24884,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -26497,7 +26492,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -26890,7 +26885,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -28749,7 +28744,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -29545,7 +29540,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -31070,7 +31065,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31144,7 +31138,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31578,7 +31571,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31731,7 +31723,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -38332,7 +38324,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -40016,7 +40007,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -42264,7 +42255,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -42723,6 +42714,7 @@ Transform:
   - {fileID: 728592313}
   - {fileID: 603858101}
   - {fileID: 1879983215}
+  - {fileID: 1663714588}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46882,8 +46874,8 @@ Transform:
   m_LocalPosition: {x: -242.1, y: 120.799995, z: 0}
   m_LocalScale: {x: 10.3169, y: 10.3169, z: 10.3169}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1516209871}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666016655
 GameObject:
@@ -48715,7 +48707,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -49742,7 +49734,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -50064,7 +50055,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -51541,7 +51532,7 @@ PrefabInstance:
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5436536939222987279, guid: 54eefa6ead6124a439c5f6c00ea05478,
         type: 3}
@@ -55702,7 +55693,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -58773,7 +58763,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -60461,7 +60450,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -61270,7 +61258,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

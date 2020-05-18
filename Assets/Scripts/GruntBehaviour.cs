@@ -12,6 +12,7 @@ public class GruntBehaviour : MonoBehaviour
     private float FireTimer;
     private bool IsStunned = false;
     private float StunTimer;
+    private Rigidbody2D EnemyBody;
 
     public Transform Player;
     public Transform Firepoint;
@@ -27,6 +28,7 @@ public class GruntBehaviour : MonoBehaviour
         EH = GMobj.GetComponent<EnemyHandler>();
         rageTracker = GM.GetComponent<RageTracker>();
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+        EnemyBody = GetComponent<Rigidbody2D>();
         FireTimer = EH.GruntFireRate;
         ThisGruntHealth = EH.GruntHealth;
     }
@@ -36,13 +38,14 @@ public class GruntBehaviour : MonoBehaviour
         if (IsStunned == false)
         {
             //Movement behaviour
-            OtherEnemies = GameObject.FindGameObjectsWithTag("Enemy");
             if (Vector2.Distance(transform.position, Player.position) > EH.GruntStopDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
+                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
+                //transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
             } else if (Vector2.Distance(transform.position, Player.position) < EH.GruntRetreatDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.GruntSpeed);
+                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.GruntSpeed);
+                //transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.GruntSpeed);
             }
 
             //Shooting Behaviour
