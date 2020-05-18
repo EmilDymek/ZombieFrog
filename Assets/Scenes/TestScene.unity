@@ -5489,7 +5489,7 @@ MonoBehaviour:
   StunTimer: 0
   StunRageCost: 50
   QuakeDuration: 2
-  QuakeGrowth: 100
+  QuakeGrowth: 10
   StunDuration: 0
   PlayerMoveSpeed: 10
   CameraFollowSpeed: 5

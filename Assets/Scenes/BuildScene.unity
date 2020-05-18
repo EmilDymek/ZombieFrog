@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 6342769}
   - component: {fileID: 6342771}
   - component: {fileID: 6342770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 8568669}
   - component: {fileID: 8568671}
   - component: {fileID: 8568670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 50476458}
   - component: {fileID: 50476460}
   - component: {fileID: 50476459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2499,7 +2499,7 @@ GameObject:
   - component: {fileID: 69511804}
   - component: {fileID: 69511806}
   - component: {fileID: 69511805}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3469,7 +3469,7 @@ GameObject:
   - component: {fileID: 89538479}
   - component: {fileID: 89538481}
   - component: {fileID: 89538480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4196,7 +4196,7 @@ GameObject:
   - component: {fileID: 123272900}
   - component: {fileID: 123272902}
   - component: {fileID: 123272901}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider Inside (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4356,7 +4356,7 @@ GameObject:
   - component: {fileID: 124534452}
   - component: {fileID: 124534454}
   - component: {fileID: 124534453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4759,7 +4759,7 @@ GameObject:
   - component: {fileID: 130519963}
   - component: {fileID: 130519965}
   - component: {fileID: 130519964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6428,6 +6428,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -7025,7 +7030,7 @@ GameObject:
   - component: {fileID: 219901963}
   - component: {fileID: 219901965}
   - component: {fileID: 219901964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider Inside (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8290,6 +8295,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -8308,7 +8318,7 @@ GameObject:
   - component: {fileID: 267765511}
   - component: {fileID: 267765513}
   - component: {fileID: 267765512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8387,7 +8397,7 @@ GameObject:
   - component: {fileID: 269718473}
   - component: {fileID: 269718475}
   - component: {fileID: 269718474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8547,7 +8557,7 @@ GameObject:
   - component: {fileID: 272817074}
   - component: {fileID: 272817076}
   - component: {fileID: 272817075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider Inside (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9031,7 +9041,7 @@ GameObject:
   - component: {fileID: 282478781}
   - component: {fileID: 282478783}
   - component: {fileID: 282478782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9099,6 +9109,92 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 63}
   m_EdgeRadius: 0
+--- !u!1 &284203587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284203588}
+  - component: {fileID: 284203589}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284203588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284203587}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1226176567}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &284203589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284203587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAIIexyTQAfXQIAAP8EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxIUDSW+sQ0kM+JrSTiy+LvcYaZMmjjwDJ8N+7km3s0hPivbe7b1crfzEuTY2ZVXqtef6kcmTfR8yf2bdRTz7iEXZKbvgndpp3ntvSiyBo3sByRXjsw4yq0Gqe/ZA74cURgU7yQulqle8wUcYaggsQBonSyvpoSdDXiB3pZ3znQ050mi796ZNOd9HoTMcMpUXdSxd3k2jaimezyXTZyhu1k5mAqsbcW++D4tsuJI6WQSiprVbjW8iUENy0npg91aHnBGrjqCMS5Byox2AknswIKJHvSusdD8NfisKgbUeg4XTPNQ2ryct+qmaCFZh94+0DhPOV5vE0uGqSPv3Hj+NAF1pVj13dOPI1bMmz/RucMjB2MOIhfD+wHkZ0ALGHrcD3EuWzWmvlZE6k1c6HOoPT+/7vpbWkxGzf443VK9DV/cy7G+3u0/dwDt0fE8GrracmNw2wESpMPKwBarqbX2Q4LIlpUxDqXfwx+Bt2w21qiQeujSWq7VJ6e1vltJeyVZiZ78bZRGmJAW5N1yhB2NMrpbHXV3jFDcpeMQ/g301bvOW653AVEuBeH0VX1Ks6XC7LlOrwhKZ8cVZwib1pTzzTnBIlZbNhw5l0YRunC8gGYTvH839Xi0G0heU8hvlidlNk08U4hlucLxEAcBHHN8jC7nFJfYJ4bYy246Fbk31ySXvWfU5Gaw112PZcw2HNPys1NMhloTaZRpQvTYqLc9RUhR5mvso5TWiD1nIZLpx9pUyobI95eqmZhlZXR6sh7bOkrOYfynokZUn4gKTszM5/AVBLAwQUAAAICAAACCHsCSnui20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UqJBUqK5qWGiqZmxSVqykZmuYaJFqql5amJiYqqZoaFJqlIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsck0AH10CAAD/BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsCSnui20AAAB4AAAACQAkAAAAAAAAAAAAAACqAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGIDAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &289698697
 GameObject:
   m_ObjectHideFlags: 0
@@ -9323,6 +9419,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -10283,6 +10384,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -12539,6 +12645,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -13263,7 +13374,7 @@ GameObject:
   - component: {fileID: 430758268}
   - component: {fileID: 430758270}
   - component: {fileID: 430758269}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13555,6 +13666,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -13573,7 +13689,7 @@ GameObject:
   - component: {fileID: 449587157}
   - component: {fileID: 449587159}
   - component: {fileID: 449587158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15010,7 +15126,7 @@ GameObject:
   - component: {fileID: 495254156}
   - component: {fileID: 495254158}
   - component: {fileID: 495254157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16628,7 +16744,7 @@ GameObject:
   - component: {fileID: 559108276}
   - component: {fileID: 559108278}
   - component: {fileID: 559108277}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16920,6 +17036,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -18228,7 +18349,7 @@ GameObject:
   - component: {fileID: 606511256}
   - component: {fileID: 606511258}
   - component: {fileID: 606511257}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19326,7 +19447,7 @@ GameObject:
   - component: {fileID: 650626657}
   - component: {fileID: 650626659}
   - component: {fileID: 650626658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20215,7 +20336,7 @@ GameObject:
   - component: {fileID: 686074557}
   - component: {fileID: 686074559}
   - component: {fileID: 686074558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21191,7 +21312,7 @@ GameObject:
   - component: {fileID: 717631234}
   - component: {fileID: 717631236}
   - component: {fileID: 717631235}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22029,7 +22150,7 @@ GameObject:
   - component: {fileID: 732001027}
   - component: {fileID: 732001029}
   - component: {fileID: 732001028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22483,6 +22604,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -22501,7 +22627,7 @@ GameObject:
   - component: {fileID: 751904598}
   - component: {fileID: 751904600}
   - component: {fileID: 751904599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22580,7 +22706,7 @@ GameObject:
   - component: {fileID: 759191474}
   - component: {fileID: 759191476}
   - component: {fileID: 759191475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23127,6 +23253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -23556,7 +23687,7 @@ GameObject:
   - component: {fileID: 797043333}
   - component: {fileID: 797043335}
   - component: {fileID: 797043334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23635,7 +23766,7 @@ GameObject:
   - component: {fileID: 800215332}
   - component: {fileID: 800215334}
   - component: {fileID: 800215333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26602,7 +26733,7 @@ GameObject:
   - component: {fileID: 922797788}
   - component: {fileID: 922797790}
   - component: {fileID: 922797789}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27491,7 +27622,7 @@ GameObject:
   - component: {fileID: 949350982}
   - component: {fileID: 949350984}
   - component: {fileID: 949350983}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27945,6 +28076,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -28611,7 +28747,7 @@ GameObject:
   - component: {fileID: 995855985}
   - component: {fileID: 995855987}
   - component: {fileID: 995855986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider Inside (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29794,6 +29930,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -30106,6 +30247,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -30205,7 +30351,7 @@ GameObject:
   - component: {fileID: 1070676285}
   - component: {fileID: 1070676287}
   - component: {fileID: 1070676286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30446,7 +30592,7 @@ GameObject:
   - component: {fileID: 1079567622}
   - component: {fileID: 1079567624}
   - component: {fileID: 1079567623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30576,6 +30722,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -31410,7 +31561,7 @@ GameObject:
   - component: {fileID: 1110934562}
   - component: {fileID: 1110934564}
   - component: {fileID: 1110934563}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31894,7 +32045,7 @@ GameObject:
   - component: {fileID: 1142113735}
   - component: {fileID: 1142113737}
   - component: {fileID: 1142113736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32135,7 +32286,7 @@ GameObject:
   - component: {fileID: 1147407681}
   - component: {fileID: 1147407683}
   - component: {fileID: 1147407682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32781,7 +32932,7 @@ GameObject:
   - component: {fileID: 1162773544}
   - component: {fileID: 1162773546}
   - component: {fileID: 1162773545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33889,6 +34040,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -34719,6 +34875,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 284203588}
   - {fileID: 1309753257}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -36162,6 +36319,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -36261,7 +36423,7 @@ GameObject:
   - component: {fileID: 1288113055}
   - component: {fileID: 1288113057}
   - component: {fileID: 1288113056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37331,7 +37493,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1226176567}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1309753258
 MonoBehaviour:
@@ -37753,6 +37915,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -38146,6 +38313,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -38319,7 +38491,7 @@ GameObject:
   - component: {fileID: 1337230738}
   - component: {fileID: 1337230740}
   - component: {fileID: 1337230739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38560,7 +38732,7 @@ GameObject:
   - component: {fileID: 1359193460}
   - component: {fileID: 1359193462}
   - component: {fileID: 1359193461}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TEMP COLLIDER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39287,7 +39459,7 @@ GameObject:
   - component: {fileID: 1380906661}
   - component: {fileID: 1380906663}
   - component: {fileID: 1380906662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TEMP COLLIDER (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39447,7 +39619,7 @@ GameObject:
   - component: {fileID: 1386585645}
   - component: {fileID: 1386585647}
   - component: {fileID: 1386585646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40099,7 +40271,7 @@ GameObject:
   - component: {fileID: 1437585516}
   - component: {fileID: 1437585518}
   - component: {fileID: 1437585517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40994,7 +41166,7 @@ GameObject:
   - component: {fileID: 1462011974}
   - component: {fileID: 1462011976}
   - component: {fileID: 1462011975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41448,6 +41620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -41466,7 +41643,7 @@ GameObject:
   - component: {fileID: 1474352624}
   - component: {fileID: 1474352626}
   - component: {fileID: 1474352625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider Inside (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41707,7 +41884,7 @@ GameObject:
   - component: {fileID: 1486968511}
   - component: {fileID: 1486968513}
   - component: {fileID: 1486968512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider Inside (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42197,7 +42374,7 @@ GameObject:
   - component: {fileID: 1508111319}
   - component: {fileID: 1508111321}
   - component: {fileID: 1508111320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42746,7 +42923,7 @@ GameObject:
   - component: {fileID: 1533198799}
   - component: {fileID: 1533198801}
   - component: {fileID: 1533198800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider Inside (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42825,7 +43002,7 @@ GameObject:
   - component: {fileID: 1541614635}
   - component: {fileID: 1541614637}
   - component: {fileID: 1541614636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider Inside (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43036,6 +43213,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -43105,6 +43287,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -43858,7 +44045,7 @@ GameObject:
   - component: {fileID: 1563544902}
   - component: {fileID: 1563544904}
   - component: {fileID: 1563544903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44069,6 +44256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -45029,6 +45221,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -45179,6 +45376,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -45248,6 +45450,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -45728,6 +45935,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -45878,6 +46090,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -46631,7 +46848,7 @@ GameObject:
   - component: {fileID: 1643560862}
   - component: {fileID: 1643560864}
   - component: {fileID: 1643560863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TEMP COLLIDER (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47601,7 +47818,7 @@ GameObject:
   - component: {fileID: 1674706397}
   - component: {fileID: 1674706399}
   - component: {fileID: 1674706398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47842,7 +48059,7 @@ GameObject:
   - component: {fileID: 1687027538}
   - component: {fileID: 1687027540}
   - component: {fileID: 1687027539}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48053,6 +48270,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -48557,7 +48779,7 @@ GameObject:
   - component: {fileID: 1702612851}
   - component: {fileID: 1702612853}
   - component: {fileID: 1702612852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48798,7 +49020,7 @@ GameObject:
   - component: {fileID: 1703729006}
   - component: {fileID: 1703729008}
   - component: {fileID: 1703729007}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49606,7 +49828,7 @@ GameObject:
   - component: {fileID: 1730958875}
   - component: {fileID: 1730958877}
   - component: {fileID: 1730958876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49847,7 +50069,7 @@ GameObject:
   - component: {fileID: 1734671214}
   - component: {fileID: 1734671216}
   - component: {fileID: 1734671215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50297,6 +50519,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -50403,7 +50630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1746835580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51605,6 +51832,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -51704,7 +51936,7 @@ GameObject:
   - component: {fileID: 1778530833}
   - component: {fileID: 1778530835}
   - component: {fileID: 1778530834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TEMP COLLIDER (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52680,7 +52912,7 @@ GameObject:
   - component: {fileID: 1811877633}
   - component: {fileID: 1811877635}
   - component: {fileID: 1811877634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52759,7 +52991,7 @@ GameObject:
   - component: {fileID: 1814914364}
   - component: {fileID: 1814914366}
   - component: {fileID: 1814914365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53567,7 +53799,7 @@ GameObject:
   - component: {fileID: 1839960587}
   - component: {fileID: 1839960589}
   - component: {fileID: 1839960588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54132,7 +54364,7 @@ GameObject:
   - component: {fileID: 1853309575}
   - component: {fileID: 1853309577}
   - component: {fileID: 1853309576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TEMP COLLIDER (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54211,7 +54443,7 @@ GameObject:
   - component: {fileID: 1854602714}
   - component: {fileID: 1854602716}
   - component: {fileID: 1854602715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R4 Collider Inside (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54695,7 +54927,7 @@ GameObject:
   - component: {fileID: 1865802062}
   - component: {fileID: 1865802064}
   - component: {fileID: 1865802063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55789,7 +56021,7 @@ GameObject:
   - component: {fileID: 1907597583}
   - component: {fileID: 1907597585}
   - component: {fileID: 1907597584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57130,6 +57362,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -58081,6 +58318,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -58105,7 +58347,7 @@ GameObject:
   - component: {fileID: 2008252369}
   - component: {fileID: 2008252371}
   - component: {fileID: 2008252370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59473,7 +59715,7 @@ GameObject:
   - component: {fileID: 2056251029}
   - component: {fileID: 2056251031}
   - component: {fileID: 2056251030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60281,7 +60523,7 @@ GameObject:
   - component: {fileID: 2074737172}
   - component: {fileID: 2074737174}
   - component: {fileID: 2074737173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60441,7 +60683,7 @@ GameObject:
   - component: {fileID: 2077003881}
   - component: {fileID: 2077003883}
   - component: {fileID: 2077003882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R2 Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61950,6 +62192,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362789425520995859, guid: 1b548752621bcc34d91b8ad569778ced,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 407734961}
     - target: {fileID: 362789425520995886, guid: 1b548752621bcc34d91b8ad569778ced,
         type: 3}
       propertyPath: m_Name
@@ -62385,7 +62632,7 @@ GameObject:
   - component: {fileID: 2138189351}
   - component: {fileID: 2138189353}
   - component: {fileID: 2138189352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R3 Collider Inside (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
