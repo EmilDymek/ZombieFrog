@@ -9,7 +9,7 @@ namespace Pathfinding
 
 
 
-    public class AstarEnemyBehaviour : VersionedMonoBehaviour
+    public class AstarEnemyBehaviour : MonoBehaviour
     {
         public Transform target;
         IAstarAI ai;

@@ -1,23 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
-namespace Pathfinding
+public class PlayerShooting : MonoBehaviour
 {
-    public class PlayerShooting : VersionedMonoBehaviour
-    {
-        public GameMaster GM;                                                   //Reference to the GM
-        public GameObject GMobj;
+    public GameMaster GM;                                                   //Reference to the GM
+    public GameObject GMobj;
+        
+    Vector3 MousePos;                                                       //Variable to store mouse position
+    Vector3 GunPos;                                                         //Variable to store gun direction
+    private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
+    public Transform Crosshair;                                             //Gameobject reference (Store the crosshair gameobject in here)
+    public Transform FirePoint01;                                           //GameObject reference (Store FirePoint01 gameobject in here)
+    public GameObject Bullet01;                                             //GameObject reference (Store Bullet Prefab in here)
+    public GameObject ImpactEffect;                                         //Gameobject Reference (Store Impact Effect here)
+    public LineRenderer LineRend;                                           //Reference to a linerenderer
+    public AmmoTracking ammoTracking;                                       //Reference to Ammotracking
 
-        Vector3 MousePos;                                                       //Variable to store mouse position
-        Vector3 GunPos;                                                         //Variable to store gun direction
-        private float FireTimer;                                                //Variable that resets to firerate on each trigger pull
-        public Transform Crosshair;                                             //Gameobject reference (Store the crosshair gameobject in here)
-        public Transform FirePoint01;                                           //GameObject reference (Store FirePoint01 gameobject in here)
-        public GameObject Bullet01;                                             //GameObject reference (Store Bullet Prefab in here)
-        public GameObject ImpactEffect;                                         //Gameobject Reference (Store Impact Effect here)
-        public LineRenderer LineRend;                                           //Reference to a linerenderer
-        public AmmoTracking ammoTracking;                                       //Reference to Ammotracking
+    //temp variabeles, move to GM later
+    public float stunCooldown = 5;
+    public float stunTimer = 0;
 
         private void Awake()
         {
@@ -49,10 +52,10 @@ namespace Pathfinding
             if (HitInfo && HitInfo.collider.tag != "Player" && HitInfo.collider.tag != "Stun" && HitInfo.collider.tag != "Bullet"
                 && HitInfo.collider.tag != "StunCollider")                                        //If the raycast detects something that isn't tagged as player 
             {
-                AstarEnemyHitbox Enemy = HitInfo.transform.GetComponent<AstarEnemyHitbox>();            //Get the Enemy game component
+                EnemyAI Enemy = HitInfo.transform.GetComponent<EnemyAI>();            //Get the Enemy game component
                 if (Enemy != null)                                                                  //If an enemy is detected
                 {
-                    Enemy.TakeDamage(GM.PlayerGunDamage);                                           //Call Takedamage function in the enemy script and send the Gun Damage variable
+                    Enemy.Damage(GM.PlayerGunDamage);                                           //Call Takedamage function in the enemy script and send the Gun Damage variable
                 }
                 Instantiate(ImpactEffect, HitInfo.point, Quaternion.identity);                      //Make an Impact effect, Where the bullet is, With locked rotation
                 LineRend.SetPosition(0, FirePoint01.position);                                      //Sets first point of the line on the fire point position
@@ -93,7 +96,15 @@ namespace Pathfinding
                     StartCoroutine(Reload());
                 }
             }
+            //if (Input.GetKey(KeyCode.F))
+            //{
+            //    if (stunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
+            //    {
+            //        GM.PlayerCurrentRage -= GM.StunRageCost;
+                    
 
+            //    }
+            //}
         }
 
         void TurnGun()
@@ -106,5 +117,5 @@ namespace Pathfinding
             float angle = Mathf.Atan2(MousePos.y, MousePos.x) * Mathf.Rad2Deg;      //Calculates the Rotation of the gun
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));        //Rotates the gun
         }
-    }
 }
+

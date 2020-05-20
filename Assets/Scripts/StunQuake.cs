@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Pathfinding
 {
-    public class StunQuake : VersionedMonoBehaviour
+    public class StunQuake : MonoBehaviour
     {
         public GameMaster GM;
         public GameObject GMobj;
@@ -35,8 +35,8 @@ namespace Pathfinding
         {
             if (HitInfo.tag == "Enemy")
             {
-                AstarEnemyHitbox Enemy = HitInfo.GetComponent<AstarEnemyHitbox>();
-                Enemy.TakeStun();
+                EnemyAI Enemy = HitInfo.GetComponent<EnemyAI>();
+                Enemy.Stun();
             }
         }
     }

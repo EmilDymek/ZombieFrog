@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Pathfinding
 {
-    public class AstarEnemyHitbox : VersionedMonoBehaviour
+    public class AstarEnemyHitbox : MonoBehaviour
     {
         public GameMaster GM;
         public EnemyHandler EH;
