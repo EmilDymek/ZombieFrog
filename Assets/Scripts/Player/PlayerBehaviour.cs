@@ -93,11 +93,11 @@ public class PlayerBehaviour : MonoBehaviour
         //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
         if (PlayerDashing == true)
         {
-            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * GM.DashDistance;
+            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * GM.DashDistance * Time.deltaTime;
         }
         else
         {
-            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed;
+            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.F))

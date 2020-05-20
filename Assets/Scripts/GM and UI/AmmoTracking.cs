@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AmmoTracking : MonoBehaviour
 {
     public Image AmmoUI;                                                //Reference to the UI Image (CHECK GM)
+    public Image AmmoUI2;
     public Text AmmoNumber;
     public bool Reloading;                                              //Checks if the player is currently reloading
     public float DisplayAmount;                                         //The displayed amount of bullets (CHECK GM AND PLAYERGUN, should always be full(MagazineSize) or Empty)
@@ -23,6 +24,7 @@ public class AmmoTracking : MonoBehaviour
         {
             DisplayAmount += Time.deltaTime / ReloadTimer;
             AmmoUI.fillAmount = DisplayAmount;
+            AmmoUI2.fillAmount = DisplayAmount;
 
             if (DisplayAmount >= 1)
             {
@@ -33,6 +35,7 @@ public class AmmoTracking : MonoBehaviour
             ReloadTimer = GM.PlayerReloadDelay;
             DisplayAmount =  GM.PlayerCurrentBullets / GM.PlayerMagazineSize;
             AmmoUI.fillAmount = DisplayAmount;
+            AmmoUI2.fillAmount = DisplayAmount;
         }
         AmmoNumber.text = GM.PlayerCurrentBullets.ToString("#.");
     }

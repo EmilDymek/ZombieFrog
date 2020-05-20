@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class RageTracker : MonoBehaviour
 {
     public Image RageUI;                                                //Reference to the UI Image (CHECK GM)
+    public Image RageUI2;
     public Text RageNumber;
     public GameMaster GM;
     public GameObject GMobj;
@@ -22,6 +23,7 @@ public class RageTracker : MonoBehaviour
             GM.PlayerCurrentRage -= Time.deltaTime * GM.PlayerRageDecay;
         }
         RageUI.fillAmount = GM.PlayerCurrentRage / GM.PlayerRageMax;
+        RageUI2.fillAmount = GM.PlayerCurrentRage / GM.PlayerRageMax;
         RageNumber.text = GM.PlayerCurrentRage.ToString("#.00");
     }
 
