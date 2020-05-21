@@ -36,7 +36,7 @@ namespace Pathfinding
             EH = GMobj.GetComponent<EnemyHandler>();
             rageTracker = GM.GetComponent<RageTracker>();
             Player = GameObject.FindGameObjectWithTag("Player").transform;
-            FireTimer = EH.GruntFireRate;
+            FireTimer = EH.gruntFireRate;
         }
 
 
@@ -60,7 +60,7 @@ namespace Pathfinding
                 if (FireTimer <= 0)
                 {
                     Instantiate(Bullet, Firepoint.position, Firepoint.rotation);
-                    FireTimer = EH.GruntFireRate;
+                    FireTimer = EH.gruntFireRate;
                 }
                 else
                 {

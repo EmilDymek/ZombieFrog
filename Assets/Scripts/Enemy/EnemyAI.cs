@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public EnemyHandler EH;
     public GameObject GMobj;
 
-    public GameObject Bullet;
+    public GameObject bullet;
     public Transform firePoint;
     public Transform target;
     public float nextWaypointDistance = 2;
@@ -23,18 +23,18 @@ public class EnemyAI : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
-    bool Engaged = false;
-    bool Stunned = false;
+    bool engaged = false;
+    bool stunned = false;
+    float stunTimer = 0;
+    float fireTimer = 0;
+    float health;
 
     //Temp Variables, move to GM later
     public float engageDistance;
     public float stopDistance;
     public float retreatDistance;
-    public float health = 10;
     public float stunDuration = 5;
-    public float StunTimer = 0;
     public float fireRate = 0.3f;
-    public float fireTimer = 0;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour
 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        health = EH.gruntHealth;
 
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, target.position, OnPathComplete);
@@ -60,29 +61,27 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetDirection();
-
-        if (!Stunned)
+        if (!stunned)
         {
             if (Vector2.Distance(transform.position, target.position) < engageDistance)
-                Engaged = true;
+                engaged = true;
 
-            if (Vector2.Distance(transform.position, target.position) > stopDistance && Engaged)
+            if (Vector2.Distance(transform.position, target.position) > stopDistance && engaged)
             {
                 ChasePlayer();
             } else if (Vector2.Distance(transform.position, target.position) < retreatDistance)
             {
                 Retreat();
-            } else if (Engaged)
+            } else if (engaged)
             {
                 Shoot();
             }
         } else
         {
-            StunTimer -= Time.deltaTime;
-            if (StunTimer <= 0)
+            stunTimer -= Time.deltaTime;
+            if (stunTimer <= 0)
             {
-                Stunned = false;
+                stunned = false;
             }
         }
 
@@ -94,8 +93,8 @@ public class EnemyAI : MonoBehaviour
 
     public void Stun()
     {
-        Stunned = true;
-        StunTimer = stunDuration;
+        stunned = true;
+        stunTimer = stunDuration;
     } 
 
     public void Damage(float Damage)
@@ -119,14 +118,41 @@ public class EnemyAI : MonoBehaviour
 
         if (fireTimer <= 0)
         {
-            Instantiate(Bullet, firePoint.position, firePoint.rotation);
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
             fireTimer = fireRate;
         }
     }
 
     void Retreat()
     {
-        rb.velocity = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * -EH.GruntSpeed / 5);
+        //rb.velocity = new Vector2(transform.position, target.position) * -EH.GruntSpeed * Time.deltaTime;
+        //rb.velocity = Vector2(transform.position, target.position, Time.deltaTime * -EH.GruntSpeed / 5);
+
+        if (path == null)
+        {
+            return;
+        }
+
+        if (currentWaypoint >= path.vectorPath.Count)
+        {
+            reachedEndOfPath = true;
+            return;
+        }
+        else
+        {
+            reachedEndOfPath = false;
+        }
+
+        GetDirection();
+
+        rb.velocity = enemyDirection * -EH.gruntSpeed * Time.deltaTime;
+
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+        if (distance < nextWaypointDistance)
+        {
+            currentWaypoint++;
+        }
     }
 
     void ChasePlayer()
@@ -146,8 +172,9 @@ public class EnemyAI : MonoBehaviour
             reachedEndOfPath = false;
         }
 
-        
-        rb.velocity = enemyDirection * EH.GruntSpeed * Time.deltaTime;
+        GetDirection();
+
+        rb.velocity = enemyDirection * EH.gruntSpeed * Time.deltaTime;
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 

@@ -19,8 +19,8 @@ public class EnemyBullet : MonoBehaviour
         GM = GMobj.GetComponent<GameMaster>();
         EH = GMobj.GetComponent<EnemyHandler>();
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * EH.GruntBulletSpeed;
-        BulletTimer = EH.GruntBulletTimer;
+        rb.velocity = transform.right * EH.gruntBulletSpeed;
+        BulletTimer = EH.gruntBulletLife;
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class EnemyBullet : MonoBehaviour
             if (HitInfo.tag == "Player")
             {
                 GameMaster Player = GM.GetComponent<GameMaster>();
-                Player.PlayerCurrentHealth -= EH.GruntDamage;
+                Player.PlayerCurrentHealth -= EH.gruntDamage;
             }
             Instantiate(ImpactEffect, transform.position, transform.rotation);
             Destroy(gameObject);

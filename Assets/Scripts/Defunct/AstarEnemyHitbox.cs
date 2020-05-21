@@ -25,7 +25,7 @@ namespace Pathfinding
             EB.GetComponent<AstarEnemyBehaviour>();
             rageTracker = GM.GetComponent<RageTracker>();
             EnemyBody = GetComponent<Rigidbody2D>();
-            ThisGruntHealth = EH.GruntHealth;
+            ThisGruntHealth = EH.gruntHealth;
         }
 
         public void TakeDamage(float Damage)
