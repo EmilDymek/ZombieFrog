@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586646401256750109}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,12 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Player Gunshot
-    clip: {fileID: 8300000, guid: c404c0f8d9b6df7458cb58da2c9af3b2, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Menu Music
     clip: {fileID: 8300000, guid: a18762b8884c8c24d9a38d907f2b6a09, type: 3}
     volume: 0.5
@@ -72,29 +66,41 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 091908a06d0b56143aaf6d3913444ab7, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Player Reload 1
     clip: {fileID: 8300000, guid: f59ae693e8e150d4dbcdf3f87a023af9, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 1
+    volume: 0.3
+    pitch: 0.8
+    loop: 0
     source: {fileID: 0}
   - name: Player Reload 2
     clip: {fileID: 8300000, guid: 93a78bfb3035aad4385893a8501cb6a1, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 1
+    volume: 0.3
+    pitch: 0.8
+    loop: 0
     source: {fileID: 0}
   - name: Player Walk 1
     clip: {fileID: 8300000, guid: 11cd00bd084f0d94ca2898a06586ba9f, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Player Walk 2
     clip: {fileID: 8300000, guid: 138ef8c6e9c8fa747be65beafcee57f4, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Gunshot 1
+    clip: {fileID: 8300000, guid: c404c0f8d9b6df7458cb58da2c9af3b2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Gunshot 2
+    clip: {fileID: 8300000, guid: c404c0f8d9b6df7458cb58da2c9af3b2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

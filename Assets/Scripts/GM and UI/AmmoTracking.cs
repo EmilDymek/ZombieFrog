@@ -25,10 +25,11 @@ public class AmmoTracking : MonoBehaviour
             DisplayAmount += Time.deltaTime / ReloadTimer;
             AmmoUI.fillAmount = DisplayAmount;
             AmmoUI2.fillAmount = DisplayAmount;
-
+            
             if (DisplayAmount >= 1)
             {
                 Reloading = false;
+                FindObjectOfType<AudioManager>().Play("Player Reload 2");
             }
         } else
         {
