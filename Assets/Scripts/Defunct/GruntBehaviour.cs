@@ -29,8 +29,8 @@ public class GruntBehaviour : MonoBehaviour
         rageTracker = GM.GetComponent<RageTracker>();
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyBody = GetComponent<Rigidbody2D>();
-        FireTimer = EH.GruntFireRate;
-        ThisGruntHealth = EH.GruntHealth;
+        FireTimer = EH.gruntFireRate;
+        ThisGruntHealth = EH.gruntHealth;
     }
 
     void Update()
@@ -38,13 +38,13 @@ public class GruntBehaviour : MonoBehaviour
         if (IsStunned == false)
         {
             //Movement behaviour
-            if (Vector2.Distance(transform.position, Player.position) > EH.GruntStopDistance)
+            if (Vector2.Distance(transform.position, Player.position) > EH.gruntStopDistance)
             {
-                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
+                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.gruntSpeed);
                 //transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * EH.GruntSpeed);
-            } else if (Vector2.Distance(transform.position, Player.position) < EH.GruntRetreatDistance)
+            } else if (Vector2.Distance(transform.position, Player.position) < EH.gruntRetreatDistance)
             {
-                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.GruntSpeed);
+                EnemyBody.velocity = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.gruntSpeed);
                 //transform.position = Vector2.MoveTowards(transform.position, Player.position, Time.deltaTime * -EH.GruntSpeed);
             }
 
@@ -52,7 +52,7 @@ public class GruntBehaviour : MonoBehaviour
             if (FireTimer <= 0)
             {
                 Instantiate(Bullet, Firepoint.position, Firepoint.rotation);
-                FireTimer = EH.GruntFireRate;
+                FireTimer = EH.gruntFireRate;
             } else
             {
                 FireTimer -= Time.deltaTime;

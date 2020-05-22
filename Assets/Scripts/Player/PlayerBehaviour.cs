@@ -7,28 +7,27 @@ public class PlayerBehaviour : MonoBehaviour
     public GameMaster GM;
     public GameObject GMobj;
 
-    private Vector2 PlayerDirection;                                             //Variable for PlayerDirection
-    public float MoveHorizontal;
-    public float MoveVertical;
+    private Vector2 playerDirection;
 
-    public Vector3 PlayerPosition;                                               //Variable for Player position
-    private Rigidbody2D PlayerBody;                                              //Keeps a reference to rigidbody
-    bool PlayerDashing = false;
-    bool PlayerStunning = false;
+    public Vector3 playerPosition;
+    private Rigidbody2D rb;
+    bool playerDashing = false;
+    bool playerStunning = false;
     public GameObject Stun;
+
     
-    void Awake()                                                                 //This is the Start function
+    void Awake()
     {
         GMobj = GameObject.Find("GM");
         GM = GMobj.GetComponent<GameMaster>();
-        PlayerBody = GetComponent<Rigidbody2D>();                                //Initializes the rigidbody
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()                                                           //This is the update function
+    void FixedUpdate()
     {
-        GetInput();                                                              //Calls the GetInput Function
+        GetInput();
         Timers();
-        PlayerPosition = this.transform.position;
+        playerPosition = this.transform.position;
     }
 
     void Timers()
@@ -46,66 +45,62 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
 
-    void GetInput()                                                             //This function checks for player input and moves the direction of movement accordingly
+    void GetInput()
     {
         //Player movement
 
-        PlayerDirection = Vector2.zero;                                         //Zeroes the cameras direction
+        playerDirection = Vector2.zero;                                         //Zeroes the cameras direction
         if (Input.GetKey(KeyCode.W))                                            //Checks if W is being pressed
         {
-            PlayerDirection += Vector2.up;                                      //Sets direction to up if W is being pressed
+            playerDirection += Vector2.up;                                      //Sets direction to up if W is being pressed
         }
         if (Input.GetKey(KeyCode.A))                                            //Checks if A is being pressed
         {
-            PlayerDirection += Vector2.left;                                    //Sets direction to left if A is being pressed
+            playerDirection += Vector2.left;                                    //Sets direction to left if A is being pressed
         }
         if (Input.GetKey(KeyCode.S))                                            //Checks if S is being pressed
         {
-            PlayerDirection += Vector2.down;                                    //Sets direction to down if S is being pressed
+            playerDirection += Vector2.down;                                    //Sets direction to down if S is being pressed
         }
         if (Input.GetKey(KeyCode.D))                                            //Checks if D is being pressed
         {
-            PlayerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
+            playerDirection += Vector2.right;                                   //Sets direction to right if D is being pressed
         }
-
-        //MoveHorizontal = Input.GetAxis("Horizontal");
-        //MoveVertical = Input.GetAxis("Vertical");
 
         //Player abilities
         if (Input.GetKey(KeyCode.LeftShift) && GM.DashTimer <= 0 && GM.PlayerCurrentRage > GM.DashRageCost)
         {
-            PlayerDashing = true;
+            playerDashing = true;
             GM.DashTimer = GM.DashCooldown;
             GM.PlayerCurrentRage -= GM.DashRageCost;
         }
 
-        if (GM.DashDurationTimer >= 0 && PlayerDashing == true)
+        if (GM.DashDurationTimer >= 0 && playerDashing == true)
         {
             GM.DashDurationTimer -= Time.deltaTime;
         }
 
         if (GM.DashDurationTimer <= 0)
         {
-            PlayerDashing = false;
+            playerDashing = false;
             GM.DashDurationTimer = GM.DashDuration;
         }
 
-        //transform.Translate(PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime);    //Moves the player according to the set direction
-        if (PlayerDashing == true)
+        if (playerDashing == true)
         {
-            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * GM.DashDistance * Time.deltaTime;
+            rb.velocity = playerDirection * GM.PlayerMoveSpeed * GM.DashDistance * Time.deltaTime;
         }
         else
         {
-            PlayerBody.velocity = PlayerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
+            rb.velocity = playerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.F))
         {
-            PlayerStunning = true;
+            playerStunning = true;
         } else
         {
-            PlayerStunning = false;
+            playerStunning = false;
         }
         
         if (Input.GetKey(KeyCode.Mouse1))
@@ -113,7 +108,7 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerMelee();
         }
 
-        if (PlayerStunning && GM.StunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
+        if (playerStunning && GM.StunTimer <= 0 && GM.PlayerCurrentRage >= GM.StunRageCost)
         {
             PlayerStun();
             GM.StunTimer = GM.StunCooldown;

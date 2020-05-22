@@ -80,12 +80,13 @@ public class PlayerShooting : MonoBehaviour
 
         void GetInput()
         {
-            if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
+            if (Input.GetKeyDown(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
             {
                 FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
                 GM.PlayerCurrentBullets -= 1;                                                                                                     //Ticks down the player bullet count
                                                                                                                                                   //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
                 StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
+                FindObjectOfType<AudioManager>().Play("Player Gunshot");
             }
             if (Input.GetKey(KeyCode.R))
             {
