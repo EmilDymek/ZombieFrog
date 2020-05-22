@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour
     public LineRenderer LineRend;                                           //Reference to a linerenderer
     public AmmoTracking ammoTracking;                                       //Reference to Ammotracking
     bool soundAlternator;
+    public bool AutoFire = false;
 
     //temp variabeles, move to GM later
     public float stunCooldown = 5;
@@ -81,16 +82,47 @@ public class PlayerShooting : MonoBehaviour
 
     void GetInput()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
-        {
-            FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
-            GM.PlayerCurrentBullets -= 1;                                                                                                     //Ticks down the player bullet count
-                                                                                                                                              //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
-            StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
+        if (!AutoFire) {
+            if (Input.GetKeyDown(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
+            {
+                FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
+                GM.PlayerCurrentBullets -= 1;                                                                                                     //Ticks down the player bullet count
+                                                                                                                                                  //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
+                StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
 
-            if (soundAlternator)
-                FindObjectOfType<AudioManager>().Play("Player Gunshot 1");
+                if (soundAlternator)
+                {
+                    FindObjectOfType<AudioManager>().Play("Player Gunshot 1");
+                    soundAlternator = false;
+                }
+                else
+                {
+                    FindObjectOfType<AudioManager>().Play("Player Gunshot 2");
+                    soundAlternator = true;
+                }
+            }
         }
+        else
+        {
+            if (Input.GetKey(KeyCode.Mouse0) && FireTimer <= 0 && GM.PlayerCurrentBullets > 0 && ammoTracking.Reloading == false)                 //If the left mouse button is pressed AND FireTimer is at 0 AND the player has more than 0 bullets AND the player isn't reloading
+            {
+                FireTimer = GM.PlayerFireRate;                                                                                                     //Reset Firetimer
+                GM.PlayerCurrentBullets -= 1;                                                                                                     //Ticks down the player bullet count
+                                                                                                                                                  //InstantiateShoot();                                                                                                   //Calls the shooting function for instantiation shooting
+                StartCoroutine(RaycastShoot());                                                                                         //Calls Shooting coroutine for raycast shooting
+
+                if (soundAlternator)
+                {
+                    FindObjectOfType<AudioManager>().Play("Player Gunshot 1");
+                    soundAlternator = false;
+                }
+                else
+                {
+                    FindObjectOfType<AudioManager>().Play("Player Gunshot 2");
+                    soundAlternator = true;
+                }
+            }
+        } 
         if (Input.GetKey(KeyCode.R))
         {
             if (ammoTracking.Reloading == false && GM.PlayerCurrentBullets != GM.PlayerMagazineSize)
