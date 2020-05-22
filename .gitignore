@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/2019.3.13f1
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
