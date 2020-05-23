@@ -16,6 +16,7 @@ public class DepthManager : MonoBehaviour
 
     void Update()
     {
+
         tempRend.sortingOrder = (int)Camera.main.ScreenToWorldPoint(this.transform.position).y * -1;
 
         timer -= Time.deltaTime;
