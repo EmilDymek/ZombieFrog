@@ -7,8 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<AudioManager>().Stop("Menu Music");
+        FindObjectOfType<AudioManager>().Play("Background Music");
+        SceneManager.LoadScene("lvl1");
+        
     }
 
     public void Quit()
