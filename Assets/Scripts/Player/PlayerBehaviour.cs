@@ -103,7 +103,7 @@ public class PlayerBehaviour : MonoBehaviour
             playerStunning = false;
         }
         
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             PlayerMelee();
         }
