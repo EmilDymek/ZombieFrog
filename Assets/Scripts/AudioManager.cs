@@ -8,8 +8,10 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+
     void Awake()
     {
+        AudioMixer mixer = Resources.Load("AudioMixer1") as AudioMixer;
 
         if (instance == null)
             instance = this;
@@ -43,7 +45,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            Debug.LogWarning("Sound " + name + " not found and could not be played!");
             return;
         }
         s.source.Play();
@@ -54,7 +56,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            Debug.LogWarning("Sound " + name + " not found and could not be stopped!");
             return;
         }
         s.source.Stop();

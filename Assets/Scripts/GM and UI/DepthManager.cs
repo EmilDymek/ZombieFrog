@@ -5,7 +5,7 @@ using UnityEngine;
 public class DepthManager : MonoBehaviour
 {
     SpriteRenderer tempRend;
-    //public bool IsPlayer;
+    public bool IsPlayer;
     float timer = 1;
 
     void Awake()
@@ -27,12 +27,12 @@ public class DepthManager : MonoBehaviour
         }
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (IsPlayer == false && other .GetComponent<DepthManager>().IsPlayer == true)
-    //    {
-    //        tempRend.color = new Color(1, 1, 1, .5f);
-    //        timer = 1;
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (IsPlayer == false && other.GetComponent<DepthManager>().IsPlayer == true)
+        {
+            tempRend.color = new Color(1, 1, 1, .5f);
+            timer = 1;
+        }
+    }
 }
