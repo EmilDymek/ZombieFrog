@@ -42,5 +42,4 @@ public class GameMaster : MonoBehaviour
 
     //Camera
     public float CameraFollowSpeed;                 //Stores the speed of which the camera will follow the player (Eg. 5)
-
 }
