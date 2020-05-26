@@ -42,13 +42,4 @@ public class GameMaster : MonoBehaviour
 
     //Camera
     public float CameraFollowSpeed;                 //Stores the speed of which the camera will follow the player (Eg. 5)
-
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Put pause menu logic here");
-        }
-    }
 }
