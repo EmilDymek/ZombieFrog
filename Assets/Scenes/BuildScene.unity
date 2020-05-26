@@ -35173,7 +35173,7 @@ MonoBehaviour:
   PlayerCurrentRage: 0
   PlayerRageTickAmount: 5
   PlayerRageDecay: 2
-  DashCooldown: 2
+  DashCooldown: 0.7
   DashTimer: 0
   DashRageCost: 1
   DashDistance: 5
