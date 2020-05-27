@@ -92,7 +92,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 0}
-  - name: Player Walk 1
+  - name: Player Walk1
     clip: {fileID: 8300000, guid: 11cd00bd084f0d94ca2898a06586ba9f, type: 3}
     audioMixerGroup: {fileID: -6053964502916622031, guid: 05f69487b0c20b04aa4a41017b9e188e,
       type: 2}
@@ -100,7 +100,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Player Walk 2
+  - name: Player Walk2
     clip: {fileID: 8300000, guid: 138ef8c6e9c8fa747be65beafcee57f4, type: 3}
     audioMixerGroup: {fileID: -6053964502916622031, guid: 05f69487b0c20b04aa4a41017b9e188e,
       type: 2}

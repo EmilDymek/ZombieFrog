@@ -15,7 +15,11 @@ public class PlayerBehaviour : MonoBehaviour
     bool playerStunning = false;
     public GameObject Stun;
 
-    
+    //Temp variables because I can't be fucked
+    float soundTimerReset = 0.4f;
+    float soundTimer = 0f;
+    bool soundAlternator = false;
+
     void Awake()
     {
         GMobj = GameObject.Find("GM");
@@ -93,6 +97,29 @@ public class PlayerBehaviour : MonoBehaviour
         else
         {
             rb.velocity = playerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
+            if (playerDirection != Vector2.zero)
+            {
+                if (soundTimer <= 0)
+                {
+                    if (soundAlternator)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Player Walk1");
+                        soundAlternator = false;
+                        soundTimer = soundTimerReset;
+                    }
+                    else
+                    {
+                        FindObjectOfType<AudioManager>().Play("Player Walk2");
+                        soundAlternator = true;
+                        soundTimer = soundTimerReset;
+                    }
+                }
+            }
+        }
+
+        if (soundTimer >= 0)
+        {
+            soundTimer -= Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.F))
