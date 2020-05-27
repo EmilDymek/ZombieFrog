@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused;
+    bool isDead = false;
     public GameObject pauseMenuUI;
     public GameObject gameUI;
+    public GameObject deathUI;
 
     void Update()
     {
@@ -25,10 +27,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
-        gameUI.SetActive(true);
-        Time.timeScale = 1f;
-        isPaused = false;
+        if (isDead == false)
+        {
+            pauseMenuUI.SetActive(false);
+            gameUI.SetActive(true);
+            Time.timeScale = 1f;
+            isPaused = false;
+        }
     }
 
     public void LoadMenu()
@@ -45,9 +50,22 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        if (isDead == false)
+        {
+            pauseMenuUI.SetActive(true);
+            gameUI.SetActive(false);
+            Time.timeScale = 0f;
+            isPaused = true;
+        }
+    }
+
+    public void DeathScreen()
+    {
+        pauseMenuUI.SetActive(false);
         gameUI.SetActive(false);
+        deathUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        isDead = true;
     }
 }

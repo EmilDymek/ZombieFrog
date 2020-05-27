@@ -19,6 +19,8 @@ public class PlayerBehaviour : MonoBehaviour
     float soundTimerReset = 0.4f;
     float soundTimer = 0f;
     bool soundAlternator = false;
+    public bool IsImmortal = false;
+
 
     void Awake()
     {
@@ -32,6 +34,11 @@ public class PlayerBehaviour : MonoBehaviour
         GetInput();
         Timers();
         playerPosition = this.transform.position;
+
+        if (GM.PlayerCurrentHealth <= 0 && IsImmortal == false)
+        {
+            Die();
+        }
     }
 
     void Timers()
@@ -152,5 +159,11 @@ public class PlayerBehaviour : MonoBehaviour
     public void PlayerMelee()
     {
         Debug.Log("Player Melee Logic not added yet");
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+        FindObjectOfType<PauseMenu>().DeathScreen();
     }
 }
