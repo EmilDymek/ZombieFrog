@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 6406cf208af58924c80ec2142e6714a5
+guid: 2450e3eaad146db48ad64f2af2348575
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -330550491981715791
-    second: can you fucking work this time_0
+      213: -2693350566990275233
+    second: facing right last turnaround_0
   - first:
-      213: -8635356834798340172
-    second: can you fucking work this time_1
+      213: -4747679897648342275
+    second: facing right last turnaround_1
+  - first:
+      213: -7030421815134376160
+    second: facing right last turnaround_2
+  - first:
+      213: 558846114795266209
+    second: facing right last turnaround_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: can you fucking work this time_0
+      name: facing right last turnaround_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 19
-        width: 113
-        height: 200
+        x: 23
+        y: 91
+        width: 44
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b669113416a96bf0800000000000000
-      internalID: -330550491981715791
+      spriteID: f5d92f6edeb4f9ad0800000000000000
+      internalID: -2693350566990275233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: can you fucking work this time_1
+      name: facing right last turnaround_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 74
-        width: 42
-        height: 69
+        x: 77
+        y: 18
+        width: 112
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b77a19f5bc092880800000000000000
-      internalID: -8635356834798340172
+      spriteID: dfa5861994adc1eb0800000000000000
+      internalID: -4747679897648342275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: facing right last turnaround_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 11
+        width: 44
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f22cf9b9cee6e90800000000000000
+      internalID: -7030421815134376160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: facing right last turnaround_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 11
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0aa7c949b61c700800000000000000
+      internalID: 558846114795266209
       vertices: []
       indices: 
       edges: []
@@ -147,6 +195,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 637261754855172450
+  userData: 637262099362839200
   assetBundleName: 
   assetBundleVariant: 
