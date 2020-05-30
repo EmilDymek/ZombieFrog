@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject GMobj;
 
     private Vector2 playerDirection;
+    private Vector2 movement;
 
     public Vector3 playerPosition;
     private Rigidbody2D rb;
@@ -29,16 +30,21 @@ public class PlayerBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         GetInput();
         Timers();
-        playerPosition = this.transform.position;
 
         if (GM.PlayerCurrentHealth <= 0 && IsImmortal == false)
         {
             Die();
         }
+    }
+
+    void FixedUpdate()
+    {
+        movePlayer();
+        playerPosition = this.transform.position;
     }
 
     void Timers()
@@ -53,6 +59,37 @@ public class PlayerBehaviour : MonoBehaviour
         {
             GM.StunTimer -= Time.deltaTime;
         }
+    }
+
+    void movePlayer()
+    {
+        if (playerDashing == true)
+        {
+            rb.velocity = playerDirection * GM.PlayerMoveSpeed * GM.DashDistance * Time.deltaTime;
+        }
+        else
+        {
+            rb.velocity = playerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
+            if (playerDirection != Vector2.zero)
+            {
+                if (soundTimer <= 0)
+                {
+                    if (soundAlternator)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Player Walk1");
+                        soundAlternator = false;
+                        soundTimer = soundTimerReset;
+                    }
+                    else
+                    {
+                        FindObjectOfType<AudioManager>().Play("Player Walk2");
+                        soundAlternator = true;
+                        soundTimer = soundTimerReset;
+                    }
+                }
+            }
+        }
+
     }
 
 
@@ -95,33 +132,6 @@ public class PlayerBehaviour : MonoBehaviour
         {
             playerDashing = false;
             GM.DashDurationTimer = GM.DashDuration;
-        }
-
-        if (playerDashing == true)
-        {
-            rb.velocity = playerDirection * GM.PlayerMoveSpeed * GM.DashDistance * Time.deltaTime;
-        }
-        else
-        {
-            rb.velocity = playerDirection * GM.PlayerMoveSpeed * Time.deltaTime;
-            if (playerDirection != Vector2.zero)
-            {
-                if (soundTimer <= 0)
-                {
-                    if (soundAlternator)
-                    {
-                        FindObjectOfType<AudioManager>().Play("Player Walk1");
-                        soundAlternator = false;
-                        soundTimer = soundTimerReset;
-                    }
-                    else
-                    {
-                        FindObjectOfType<AudioManager>().Play("Player Walk2");
-                        soundAlternator = true;
-                        soundTimer = soundTimerReset;
-                    }
-                }
-            }
         }
 
         if (soundTimer >= 0)
