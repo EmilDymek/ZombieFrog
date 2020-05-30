@@ -18,6 +18,7 @@ namespace Pathfinding
             GM = GMobj.GetComponent<GameMaster>();
             QuakeCollider = GetComponent<CircleCollider2D>();
             QuakeTimer = GM.QuakeDuration;
+            GM.PlayerCurrentHealth = GM.PlayerMaxHealth;
         }
 
         void Update()

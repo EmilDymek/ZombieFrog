@@ -42,4 +42,8 @@ public class GameMaster : MonoBehaviour
 
     //Camera
     public float CameraFollowSpeed;                 //Stores the speed of which the camera will follow the player (Eg. 5)
+
+    //idgaf bandaid fix i guess
+    public int enemiesKilled = 0;
+    public int enemiesOnLevel;
 }

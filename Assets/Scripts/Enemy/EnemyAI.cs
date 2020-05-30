@@ -103,6 +103,7 @@ public class EnemyAI : MonoBehaviour
         rageTracker.RageTick();
         if (health <= 0)
         {
+            GM.enemiesKilled++;
             Destroy(gameObject);
         }
     }

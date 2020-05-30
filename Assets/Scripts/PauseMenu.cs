@@ -5,11 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameMaster GM;
+    public GameObject GMobj;
+
     public static bool isPaused;
     bool isDead = false;
     public GameObject pauseMenuUI;
     public GameObject gameUI;
     public GameObject deathUI;
+    public GameObject winUI;
+
+    void Start()
+    {
+        GMobj = GameObject.Find("GM");
+        GM = GMobj.GetComponent<GameMaster>();
+    }
 
     void Update()
     {
@@ -22,6 +32,10 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+        }
+        if (GM.enemiesKilled == GM.enemiesOnLevel)
+        {
+            WinnerIsYou();
         }
     }
 
@@ -64,6 +78,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         gameUI.SetActive(false);
         deathUI.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+        isDead = true;
+    }
+
+    public void WinnerIsYou()
+    {
+        pauseMenuUI.SetActive(false);
+        gameUI.SetActive(false);
+        deathUI.SetActive(false);
+        winUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
         isDead = true;
