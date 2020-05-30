@@ -251,6 +251,6 @@ public class PlayerGFX : MonoBehaviour
             transform.position.x - mousePosition.x,
             transform.position.y - mousePosition.y
             ) * Mathf.Rad2Deg;
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 }
