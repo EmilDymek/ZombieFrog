@@ -56,6 +56,10 @@ public class PlayerGFX : MonoBehaviour
                 animArray[1].SetActive(false);
                 animArray[2].SetActive(false);
                 animArray[3].SetActive(false);
+                animArray[4].SetActive(false);
+                animArray[5].SetActive(false);
+                animArray[6].SetActive(false);
+                animArray[7].SetActive(false);
             }
         }
         else if (angle < -45 && angle > -135)
@@ -76,6 +80,10 @@ public class PlayerGFX : MonoBehaviour
                 animArray[1].SetActive(false);
                 animArray[2].SetActive(false);
                 animArray[3].SetActive(false);
+                animArray[4].SetActive(false);
+                animArray[5].SetActive(false);
+                animArray[6].SetActive(false);
+                animArray[7].SetActive(false);
             }
         }
         else if (angle < 45 && angle > -45)
@@ -96,6 +104,10 @@ public class PlayerGFX : MonoBehaviour
                 animArray[1].SetActive(false);
                 animArray[2].SetActive(false);
                 animArray[3].SetActive(false);
+                animArray[4].SetActive(false);
+                animArray[5].SetActive(false);
+                animArray[6].SetActive(false);
+                animArray[7].SetActive(false);
             }
         }
         else if (angle > 135 || angle < -135)
@@ -116,6 +128,10 @@ public class PlayerGFX : MonoBehaviour
                 animArray[1].SetActive(false);
                 animArray[2].SetActive(false);
                 animArray[3].SetActive(false);
+                animArray[4].SetActive(false);
+                animArray[5].SetActive(false);
+                animArray[6].SetActive(false);
+                animArray[7].SetActive(false);
             }
         }
     }
